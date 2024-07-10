@@ -1,0 +1,1437 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="CHOICE_make_order" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1834.4,15214.4" sap2010:WorkflowViewState.IdRef="CHOICE_make_order_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>System.Windows</x:String>
+      <x:String>System.Windows.Media.Animation</x:String>
+      <x:String>System.Windows.Media</x:String>
+      <x:String>System.Windows.Threading</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Windows.Presentation</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="CHOICE_make_order" sap:VirtualizedContainerService.HintSize="1844.8,15149.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="adres" />
+      <Variable x:TypeArguments="x:String" Name="comment_for_delivery" />
+      <Variable x:TypeArguments="x:String" Name="delivery_time" />
+      <Variable x:TypeArguments="x:String" Name="in_order" />
+      <Variable x:TypeArguments="x:String" Name="order_code" />
+      <Variable x:TypeArguments="x:String" Default="today_orders" Name="today_order" />
+      <Variable x:TypeArguments="x:String" Name="comment" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Haiku Sushi Sushi z Dowozem na terenie" sap:VirtualizedContainerService.HintSize="1782.4,15060.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="c24c7721-6ec5-482b-804a-c03cf45d462a" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1748.8,14820.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="time_selector_cildren" />
+              <Variable x:TypeArguments="ui:UiElement" Name="deleteORSearchAdresButton" />
+              <Variable x:TypeArguments="ui:UiElement" Name="selectTimeBtn" />
+              <Variable x:TypeArguments="x:String" Name="extra_comment_flat_number">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </Variable.Default>
+              </Variable>
+              <Variable x:TypeArguments="x:Int32" Name="index_of_m_in_adress" />
+              <Variable x:TypeArguments="x:String" Default="lunching.pl / " Name="const_comment" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="1686.4,14730.4" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+              <ueab:ExcelProcessScopeX.Body>
+                <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1652.8,14619.2" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="1590.4,14530.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" TemplatePath="today_orders.xlsx" UseTemplate="True" WorkbookPath="[today_order]">
+                      <ueab:ExcelApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1556.8,14214.4" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="NOW" />
+                              <Variable x:TypeArguments="x:String" Name="first_run" />
+                              <Variable x:TypeArguments="x:String" Name="third_run" />
+                              <Variable x:TypeArguments="x:String" Name="second_run" />
+                              <Variable x:TypeArguments="x:String" Name="exel_sheet_name" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:MultipleAssign sap2010:Annotation.AnnotationText="sprawdzenie z ktorego excela czytac" DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1494.4,305.6" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                              <ui:MultipleAssign.AssignOperations>
+                                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[NOW]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[System.DateTime.Now.ToShortTimeString]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[first_run]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">10:45</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[second_run]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">12:00</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[third_run]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">14:00</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[exel_sheet_name]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">10_45</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                </scg:List>
+                              </ui:MultipleAssign.AssignOperations>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:MultipleAssign>
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1494.4,1189.6" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="688,1079.2" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <If Condition="[Convert.ToBoolean(NOW&gt;first_run and NOW&lt; second_run)]" sap:VirtualizedContainerService.HintSize="625.6,990.4" sap2010:WorkflowViewState.IdRef="If_8">
+                                    <If.Then>
+                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,192.8" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <Assign sap:VirtualizedContainerService.HintSize="433.6,104" sap2010:WorkflowViewState.IdRef="Assign_16">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">[exel_sheet_name]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">10_45</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </Sequence>
+                                    </If.Then>
+                                    <If.Else>
+                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="592,636" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <If Condition="[Convert.ToBoolean(NOW&gt;second_run and NOW&lt; third_run)]" sap:VirtualizedContainerService.HintSize="529.6,547.2" sap2010:WorkflowViewState.IdRef="If_9">
+                                          <If.Then>
+                                            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,192.8" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <Assign sap:VirtualizedContainerService.HintSize="433.6,104" sap2010:WorkflowViewState.IdRef="Assign_17">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:String">[exel_sheet_name]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:String">12_00</InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                            </Sequence>
+                                          </If.Then>
+                                          <If.Else>
+                                            <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="496,192.8" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <Assign sap:VirtualizedContainerService.HintSize="433.6,104" sap2010:WorkflowViewState.IdRef="Assign_18">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:String">[exel_sheet_name]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:String">14_00</InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                            </Sequence>
+                                          </If.Else>
+                                        </If>
+                                      </Sequence>
+                                    </If.Else>
+                                  </If>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                            </ui:CommentOut>
+                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="1494.4,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_32" Text="[exel_sheet_name]" />
+                            <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="1494.4,12512.8" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Excel.Sheet(exel_sheet_name).Range(&quot;A:H&quot;)]" SaveAfterEachRow="False">
+                              <ueab:ExcelForEachRowX.Body>
+                                <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                                  <ActivityAction.Argument1>
+                                    <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                                  </ActivityAction.Argument1>
+                                  <ActivityAction.Argument2>
+                                    <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                                  </ActivityAction.Argument2>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1460.8,12296.8" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="1398.4,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_33" Text="[CurrentRow.ByIndex(0) + vbCrLf + CurrentRow.ByIndex(1)+ vbCrLf + CurrentRow.ByIndex(2) + vbCrLf + CurrentRow.ByIndex(3).ToString+ vbCrLf + CurrentRow.ByIndex(4).ToString+ vbCrLf + CurrentRow.ByIndex(5).ToString]" />
+                                    <ueab:ReadCellValueX Cell="[CurrentRow.ByIndex(5)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="1398.4,192" sap2010:WorkflowViewState.IdRef="ReadCellValueX_1">
+                                      <ueab:ReadCellValueX.SaveTo>
+                                        <OutArgument x:TypeArguments="x:String">[in_order]</OutArgument>
+                                      </ueab:ReadCellValueX.SaveTo>
+                                    </ueab:ReadCellValueX>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1398.4,176" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[in_order]" />
+                                    <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Dodawanie zamowienia" sap:VirtualizedContainerService.HintSize="1398.4,3189.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="x:String" Name="addButtonText" />
+                                        <Variable x:TypeArguments="s:String[]" Name="arr_in_order" />
+                                      </Sequence.Variables>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Szukaj'" sap:VirtualizedContainerService.HintSize="1048,225.6" sap2010:WorkflowViewState.IdRef="NClick_32" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Version="V3">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://haikusushi.net/" CVScreenId="df9f4d48-2171-4371-888d-9899ae8df433" CvElementArea="662, 236, 144, 66" CvTextArea="724, 261, 60, 20" CvTextArgument="Szukaj" CvType="Button" DesignTimeRectangle="666, 240, 139, 60" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='' class='styles_button___Dvql styles_appearanceStroke__LKd1h styles_withShadow__qhvq4' aaname='Szukaj' check:innerText='Szukaj' /&gt;" Guid="fb755a50-22a5-4138-9297-ea443b24b3d6" InformativeScreenshot="ab81a6e26c8ec90f2248a6c15bf4c1f3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target CVScreenId="df9f4d48-2171-4371-888d-9899ae8df433" CvElementArea="811, 236, 174, 67" CvTextArea="874, 261, 88, 20" CvTextArgument="Popularne" CvType="Button" DesignTimeRectangle="815, 240, 169, 60" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Popularne' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Popularne' tag='BUTTON' type='' class='styles_button___Dvql styles_appearanceStroke__LKd1h styles_withShadow__qhvq4' check:innerText='Popularne' /&gt;" Guid="dcc150dd-5618-4c46-9fc9-bf3606a8786a" SearchSteps="FuzzySelector, CV" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NClick.Target>
+                                        <uix:NClick.VerifyOptions>
+                                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                            <uix:VerifyExecutionOptions.Retry>
+                                              <InArgument x:TypeArguments="x:Boolean" />
+                                            </uix:VerifyExecutionOptions.Retry>
+                                            <uix:VerifyExecutionOptions.Timeout>
+                                              <InArgument x:TypeArguments="x:Double" />
+                                            </uix:VerifyExecutionOptions.Timeout>
+                                          </uix:VerifyExecutionOptions>
+                                        </uix:NClick.VerifyOptions>
+                                      </uix:NClick>
+                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="1048,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[in_order]" />
+                                      <Assign sap:VirtualizedContainerService.HintSize="1048,113.6" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="s:String[]">[arr_in_order]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="s:String[]">[in_order.Split(",")]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1048,2580.8" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[arr_in_order]">
+                                        <ui:ForEach.Body>
+                                          <ActivityAction x:TypeArguments="x:String">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1014.4,2392" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                              <Sequence.Variables>
+                                                <Variable x:TypeArguments="ui:UiElement" Name="deleteSearchbutton" />
+                                                <Variable x:TypeArguments="ui:UiElement" Name="firstElementSearch" />
+                                              </Sequence.Variables>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="952,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[currentText]" />
+                                              <uix:NCheckState DisplayName="Check App State 'NOWOŚCIBURGERYFUTOMAKIW…'" sap:VirtualizedContainerService.HintSize="952,656.8" sap2010:WorkflowViewState.IdRef="NCheckState_4" OutUiElement="[deleteSearchbutton]" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Version="V3">
+                                                <uix:NCheckState.IfExists>
+                                                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,406.4" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_20" Text="[&quot;najpierw usununac, &quot;]" />
+                                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="387.2,198.4" sap2010:WorkflowViewState.IdRef="NClick_33" InUiElement="[deleteSearchbutton]" KeyModifiers="None" MouseButton="Left" Version="V3">
+                                                      <uix:NClick.VerifyOptions>
+                                                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                          <uix:VerifyExecutionOptions.Retry>
+                                                            <InArgument x:TypeArguments="x:Boolean" />
+                                                          </uix:VerifyExecutionOptions.Retry>
+                                                          <uix:VerifyExecutionOptions.Timeout>
+                                                            <InArgument x:TypeArguments="x:Double" />
+                                                          </uix:VerifyExecutionOptions.Timeout>
+                                                        </uix:VerifyExecutionOptions>
+                                                      </uix:NClick.VerifyOptions>
+                                                    </uix:NClick>
+                                                  </Sequence>
+                                                </uix:NCheckState.IfExists>
+                                                <uix:NCheckState.IfNotExists>
+                                                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,200.8" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,110.4" sap2010:WorkflowViewState.IdRef="MessageBox_21" Text="[&quot;można wpisywać&quot;]" />
+                                                  </Sequence>
+                                                </uix:NCheckState.IfNotExists>
+                                                <uix:NCheckState.Target>
+                                                  <uix:TargetAnchorable BrowserURL="https://haikusushi.net/search?q=lunch" CVScreenId="e946ecaf-ef0b-44e1-8b74-5829a77a9862" CvElementArea="189, 551, 1547, 77" CvType="Button" DesignTimeRectangle="1692, 579, 25, 25" DesignTimeScaleFactor="1.25" ElementType="Icon" FullSelectorArgument="&lt;webctrl parentid='mobile-section-menu' tag='path' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='mobile-section-menu' tag='path' type='' class='' aaname='' /&gt;" Guid="cfe39dd6-a4e0-4076-b106-0ffa208e9ed8" InformativeScreenshot="1005bd586b922eed1478aed846416631.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Szukaj' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target DesignTimeRectangle="194, 445, 1540, 50" FullSelectorArgument="&lt;webctrl id='mobile-categories-tabs' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mobile-categories-tabs' tag='DIV' type='' class='styles_mobile-categories-tabs__jgOH1' aaname='' check:innerText='NOWOŚCI&amp;#xD;&amp;#xA;BURGERY&amp;#xD;&amp;#xA;FUTOMAKI&amp;#xD;&amp;#xA;WEGE MENU&amp;#xD;&amp;#xA;URAMAKI&amp;#xD;&amp;#xA;BENTO&amp;#xD;&amp;#xA;HOSOMAKI&amp;#xD;&amp;#xA;TALERZE CATERINGOWE&amp;#xD;&amp;#xA;PRZYSTAWKI&amp;#xD;&amp;#xA;ZUPY&amp;#xD;&amp;#xA;THAI' /&gt;" Guid="7d28b403-3e29-48dc-bf23-a1f49a91f2cb" SearchSteps="FuzzySelector" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NCheckState.Target>
+                                              </uix:NCheckState>
+                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBetweenKeys="1" DisplayName="Type Into 'Nazwa dania'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="952,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Text="[currentText]" Version="V3">
+                                                <uix:NTypeInto.Target>
+                                                  <uix:TargetAnchorable BrowserURL="https://haikusushi.net/search?q=hg" CVScreenId="da615466-2388-4bea-b670-42cacbd33535" CvElementArea="200, 555, 1534, 76" CvTextArea="851, 576, 185, 27" CvTextArgument="Nazwa dania" CvType="Button" DesignTimeRectangle="194, 556, 1540, 70" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='styles_sizeLarge__NPbXs styles_withShadow__qCwJG styles_isDesktop__Utr8g styles_searchable__LMbO8' placeholder='Nazwa dania' aaname='' /&gt;" Guid="951f64b2-5ec1-4be5-ab8c-be94c2de6919" InformativeScreenshot="230289d441d6091af255bed6ee80b9ed.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Szukaj' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target DesignTimeRectangle="194, 445, 1540, 50" FullSelectorArgument="&lt;webctrl id='mobile-categories-tabs' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mobile-categories-tabs' tag='DIV' type='' class='styles_mobile-categories-tabs__jgOH1' aaname='' check:innerText='NOWOŚCI&amp;#xD;&amp;#xA;BURGERY&amp;#xD;&amp;#xA;FUTOMAKI&amp;#xD;&amp;#xA;WEGE MENU&amp;#xD;&amp;#xA;URAMAKI&amp;#xD;&amp;#xA;BENTO&amp;#xD;&amp;#xA;HOSOMAKI&amp;#xD;&amp;#xA;TALERZE CATERINGOWE&amp;#xD;&amp;#xA;PRZYSTAWKI&amp;#xD;&amp;#xA;ZUPY&amp;#xD;&amp;#xA;THAI' /&gt;" Guid="230479c1-0f13-439f-ba32-bb3bde927483" SearchSteps="FuzzySelector" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NTypeInto.Target>
+                                                <uix:NTypeInto.VerifyOptions>
+                                                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                      <InArgument x:TypeArguments="x:Boolean" />
+                                                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                      <InArgument x:TypeArguments="x:Double" />
+                                                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                  </uix:VerifyExecutionTypeIntoOptions>
+                                                </uix:NTypeInto.VerifyOptions>
+                                              </uix:NTypeInto>
+                                              <uix:NCheckState DisplayName="Check App State 'Wynik wyszukiwania'" sap:VirtualizedContainerService.HintSize="952,1242.4" sap2010:WorkflowViewState.IdRef="NCheckState_7" OutUiElement="[firstElementSearch]" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Version="V3">
+                                                <uix:NCheckState.IfExists>
+                                                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,544" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_28" Text="[&quot;znaleziono: &quot;+ currentText]" />
+                                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Dodaj'" sap:VirtualizedContainerService.HintSize="387.2,225.6" sap2010:WorkflowViewState.IdRef="NClick_26" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Version="V3">
+                                                      <uix:NClick.Target>
+                                                        <uix:TargetAnchorable BrowserURL="https://haikusushi.net/search?q=lunch%2001" CVScreenId="a746d13a-32cf-463e-a25b-1a578598c551" CvElementArea="377, 980, 168, 56" CvTextArea="426, 1000, 73, 16" CvTextArgument="+ DODAJ" CvType="Button" DesignTimeRectangle="380, 1108, 163, 50" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl parentid='category-search' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='category-search' tag='BUTTON' type='' class='styles_button___Dvql styles_sizeSmall__NCTix styles_appearancePrimary__XMJoZ styles_fullWidth__x3ayC styles_ProductBottomBtnAdd__fMl4K' aaname=' Dodaj' check:innerText='DODAJ' /&gt;" Guid="bf424b2b-1338-4506-8d76-192adff6078c" InformativeScreenshot="c46e6e9ac81ffd158e4430d01aae08c3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Szukaj' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                              <uix:Target CVScreenId="a746d13a-32cf-463e-a25b-1a578598c551" CvTextArea="191, 561, 425, 43" CvTextArgument="Wynik wyszukiwania:" CvType="Text" DesignTimeRectangle="194, 681, 1540, 50" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='category-search' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='category-search' tag='DIV' type='' class='styles_MenuListCategoryTitle__UrzJK' aaname='Wynik wyszukiwania:' check:innerText='Wynik wyszukiwania:' /&gt;" Guid="188b40d6-8e29-4fc8-8243-9b4881bbd9e7" SearchSteps="FuzzySelector, CV" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NClick.Target>
+                                                      <uix:NClick.VerifyOptions>
+                                                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                          <uix:VerifyExecutionOptions.Retry>
+                                                            <InArgument x:TypeArguments="x:Boolean" />
+                                                          </uix:VerifyExecutionOptions.Retry>
+                                                          <uix:VerifyExecutionOptions.Timeout>
+                                                            <InArgument x:TypeArguments="x:Double" />
+                                                          </uix:VerifyExecutionOptions.Timeout>
+                                                        </uix:VerifyExecutionOptions>
+                                                      </uix:NClick.VerifyOptions>
+                                                    </uix:NClick>
+                                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,110.4" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[&quot;Dodano do koszyka :&quot; + currentText]" />
+                                                  </Sequence>
+                                                </uix:NCheckState.IfExists>
+                                                <uix:NCheckState.IfNotExists>
+                                                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,1000.8" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                                                    <Sequence.Variables>
+                                                      <Variable x:TypeArguments="x:String" Name="orderManual" />
+                                                    </Sequence.Variables>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_29" Text="[&quot;Nie znaleziono: &quot;+ currentText]" />
+                                                    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="387.2,273.6" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="[&quot;Prosze wpisac : &quot; + in_order + &quot;i recznie dodac do koszyka&quot;]" Title="Nie znaleziono: ">
+                                                      <ui:InputDialog.Result>
+                                                        <OutArgument x:TypeArguments="x:String">[orderManual]</OutArgument>
+                                                      </ui:InputDialog.Result>
+                                                    </ui:InputDialog>
+                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Nazwa dania'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_12" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Text="[orderManual]" Version="V3">
+                                                      <uix:NTypeInto.Target>
+                                                        <uix:TargetAnchorable BrowserURL="https://haikusushi.net/search?q=hg" CVScreenId="da615466-2388-4bea-b670-42cacbd33535" CvElementArea="200, 555, 1534, 76" CvTextArea="851, 576, 185, 27" CvTextArgument="Nazwa dania" CvType="Button" DesignTimeRectangle="194, 556, 1540, 70" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='styles_sizeLarge__NPbXs styles_withShadow__qCwJG styles_isDesktop__Utr8g styles_searchable__LMbO8' placeholder='Nazwa dania' aaname='' /&gt;" Guid="951f64b2-5ec1-4be5-ab8c-be94c2de6919" InformativeScreenshot="230289d441d6091af255bed6ee80b9ed.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Szukaj' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                              <uix:Target DesignTimeRectangle="194, 445, 1540, 50" FullSelectorArgument="&lt;webctrl id='mobile-categories-tabs' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mobile-categories-tabs' tag='DIV' type='' class='styles_mobile-categories-tabs__jgOH1' aaname='' check:innerText='NOWOŚCI&amp;#xD;&amp;#xA;BURGERY&amp;#xD;&amp;#xA;FUTOMAKI&amp;#xD;&amp;#xA;WEGE MENU&amp;#xD;&amp;#xA;URAMAKI&amp;#xD;&amp;#xA;BENTO&amp;#xD;&amp;#xA;HOSOMAKI&amp;#xD;&amp;#xA;TALERZE CATERINGOWE&amp;#xD;&amp;#xA;PRZYSTAWKI&amp;#xD;&amp;#xA;ZUPY&amp;#xD;&amp;#xA;THAI' /&gt;" Guid="230479c1-0f13-439f-ba32-bb3bde927483" SearchSteps="FuzzySelector" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NTypeInto.Target>
+                                                      <uix:NTypeInto.VerifyOptions>
+                                                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                            <InArgument x:TypeArguments="x:Boolean" />
+                                                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                            <InArgument x:TypeArguments="x:Double" />
+                                                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                        </uix:VerifyExecutionTypeIntoOptions>
+                                                      </uix:NTypeInto.VerifyOptions>
+                                                    </uix:NTypeInto>
+                                                    <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="387.2,122.4" sap2010:WorkflowViewState.IdRef="Delay_4" />
+                                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,110.4" sap2010:WorkflowViewState.IdRef="MessageBox_30" Text="[&quot;odredManual&quot; + orderManual]" />
+                                                  </Sequence>
+                                                </uix:NCheckState.IfNotExists>
+                                                <uix:NCheckState.Target>
+                                                  <uix:TargetAnchorable BrowserURL="https://haikusushi.net/search?q=grill%20set" DesignTimeRectangle="194, 621, 370, 429" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl class='styles_wrapper__VoCDy' parentid='category-search' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='styles_wrapper__VoCDy' parentid='category-search' tag='DIV' type='' aaname='' /&gt;" Guid="87761795-7714-4ae2-82fb-73c499400d4b" InformativeScreenshot="15f6ae1fe0202e85268d878108fd2d00.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Szukaj' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target CVScreenId="cf8903f8-adfa-49e6-a195-c6a942e06416" CvTextArea="191, 561, 425, 43" CvTextArgument="Wynik wyszukiwania:" CvType="Text" DesignTimeRectangle="191, 561, 425, 43" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='category-search' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='category-search' tag='DIV' type='' class='styles_MenuListCategoryTitle__UrzJK' aaname='Wynik wyszukiwania:' check:innerText='Wynik wyszukiwania:' /&gt;" Guid="affe9a5e-5cb8-430c-b530-cfdeb7b35a4e" SearchSteps="FuzzySelector, CV" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NCheckState.Target>
+                                              </uix:NCheckState>
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </ui:ForEach.Body>
+                                      </ui:ForEach>
+                                    </Sequence>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SVG'" sap:VirtualizedContainerService.HintSize="1398.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://haikusushi.net/" CVScreenId="6ccff544-c0b2-46e7-b621-68e8ad3c610e" CvTextArea="1230, 261, 195, 17" CvTextArgument="3 pozycji za 43.97 PLN" CvType="Text" DesignTimeRectangle="1172, 240, 314, 60" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='3 pozycji za 43.97 PLN' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='3 pozycji za 43.97 PLN' tag='BUTTON' type='' class='styles_button___Dvql styles_appearancePrimary__XMJoZ styles_withShadow__qhvq4 styles_desktop-cart-button__E0xcX' /&gt;" Guid="963f6228-1ac5-4ffc-a684-2bf1be8ccd7b" InformativeScreenshot="60fda0c31c80248c6fa0bd1837360123.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target CVScreenId="6ccff544-c0b2-46e7-b621-68e8ad3c610e" CvTextArea="1515, 261, 22, 16" CvTextArgument="PL" CvType="Text" DesignTimeRectangle="1496, 240, 98, 60" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='pl' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='pl' tag='BUTTON' type='' class='styles_button___Dvql styles_appearanceStroke__LKd1h styles_withShadow__qhvq4 styles_button__WMBLY styles_language__6ZQgV' check:innerText='PL' /&gt;" Guid="1542a78a-0f56-457f-be16-20f03c938514" SearchSteps="FuzzySelector, CV" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="1398.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SVG'" sap:VirtualizedContainerService.HintSize="1398.4,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://haikusushi.net/search?q=lunch" CVScreenId="ed892532-6ac2-4220-8898-e9b47d4d73da" CvElementArea="1455, 460, 169, 61" CvType="Button" DesignTimeRectangle="1575, 478, 32, 24" DesignTimeScaleFactor="1" ElementType="Icon" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;button&amp;gt;svg' parentid='device-type-selector' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='device-type-selector' tag='svg' class='' aaname='' /&gt;" Guid="3327ee76-a41c-48e2-b700-ffea5d8a9831" InformativeScreenshot="3f65a0d4f86864a5169892a700812715.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Szukaj' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target CVScreenId="ed892532-6ac2-4220-8898-e9b47d4d73da" CvElementArea="1455, 460, 169, 61" CvTextArea="1470, 480, 82, 16" CvTextArgument="Potwierdz" CvType="Button" DesignTimeRectangle="1456, 462, 167, 56" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Potwierdź' parentid='device-type-selector' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Potwierdź' parentid='device-type-selector' tag='BUTTON' type='' class='styles_button___Dvql styles_sizeLarge__YGfzR styles_appearancePrimary__XMJoZ styles_cart-desktop-modal-body-bottom-button__VbfAX' check:innerText='Potwierdź' /&gt;" Guid="8a5d9619-003d-46bb-a75f-cb3a464de9d7" SearchSteps="FuzzySelector, CV" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                      <uix:NClick.VerifyOptions>
+                                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                          <uix:VerifyExecutionOptions.Retry>
+                                            <InArgument x:TypeArguments="x:Boolean" />
+                                          </uix:VerifyExecutionOptions.Retry>
+                                          <uix:VerifyExecutionOptions.Timeout>
+                                            <InArgument x:TypeArguments="x:Double" />
+                                          </uix:VerifyExecutionOptions.Timeout>
+                                        </uix:VerifyExecutionOptions>
+                                      </uix:NClick.VerifyOptions>
+                                    </uix:NClick>
+                                    <ueab:ReadCellValueX Cell="[CurrentRow.ByIndex(0)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="1398.4,192" sap2010:WorkflowViewState.IdRef="ReadCellValueX_2">
+                                      <ueab:ReadCellValueX.SaveTo>
+                                        <OutArgument x:TypeArguments="x:String">[adres]</OutArgument>
+                                      </ueab:ReadCellValueX.SaveTo>
+                                    </ueab:ReadCellValueX>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1398.4,176" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn" Message="[&quot;dodawanie adresu dosawy  &quot;+ adres]" />
+                                    <Assign sap:VirtualizedContainerService.HintSize="1398.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_12">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[index_of_m_in_adress]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">[adres.IndexOf(" m. ")]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <If Condition="[index_of_m_in_adress = -1]" sap:VirtualizedContainerService.HintSize="1398.4,7513.6" sap2010:WorkflowViewState.IdRef="If_6">
+                                      <If.Then>
+                                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,136.8" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="MessageBox_26" Text="[&quot;nic nie robić z adresem&quot;]">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </ui:MessageBox>
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="1364.8,7215.2" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Assign sap:VirtualizedContainerService.HintSize="1302.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:String">[extra_comment_flat_number]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:String">["/ NUMER MIESZKANIA :" + adres.Substring(index_of_m_in_adress +1)]</InArgument>
+                                            </Assign.Value>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </Assign>
+                                          <Assign sap:VirtualizedContainerService.HintSize="1302.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:String">[adres]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:String">[adres.Substring(0, index_of_m_in_adress)]</InArgument>
+                                            </Assign.Value>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </Assign>
+                                          <ueab:ReadCellValueX Cell="[CurrentRow.ByIndex(6)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="1302.4,192" sap2010:WorkflowViewState.IdRef="ReadCellValueX_3">
+                                            <ueab:ReadCellValueX.SaveTo>
+                                              <OutArgument x:TypeArguments="x:String">[comment]</OutArgument>
+                                            </ueab:ReadCellValueX.SaveTo>
+                                          </ueab:ReadCellValueX>
+                                          <ueab:ReadCellValueX Cell="[CurrentRow.ByIndex(4)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="1302.4,192" sap2010:WorkflowViewState.IdRef="ReadCellValueX_4">
+                                            <ueab:ReadCellValueX.SaveTo>
+                                              <OutArgument x:TypeArguments="x:String">[order_code]</OutArgument>
+                                            </ueab:ReadCellValueX.SaveTo>
+                                          </ueab:ReadCellValueX>
+                                          <If Condition="[comment = &quot;&quot;]" DisplayName="[If] dodanie komentarza" sap:VirtualizedContainerService.HintSize="1302.4,6515.2" sap2010:WorkflowViewState.IdRef="If_1">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <If.Then>
+                                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,592" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Komentarz do zamówienia'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="353.6,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Text="[const_comment +  order_code]" Version="V3">
+                                                  <uix:NTypeInto.Target>
+                                                    <uix:TargetAnchorable BrowserURL="https://haikusushi.net/check-order" CVScreenId="7589b27a-e626-450c-91a8-83a10502f5c3" CvElementArea="1060, 665, 447, 78" CvType="InputBox" DesignTimeRectangle="1061, 666, 446, 74" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TEXTAREA' type='' class='styles_textarea__9Sw56' placeholder='Wpisz swój komentarz' aaname='' /&gt;" Guid="8e0d2e4d-81dc-477c-a73b-88677f6b1068" InformativeScreenshot="a91643cb7c627cd34afa922b7b1d41fb.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Sprawdź zamówienie' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                      <uix:TargetAnchorable.Anchors>
+                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                          <uix:Target CVScreenId="7589b27a-e626-450c-91a8-83a10502f5c3" CvTextArea="1066, 632, 234, 15" CvTextArgument="= Komentarz do zamowienia" CvType="Text" DesignTimeRectangle="1061, 628, 446, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='H4' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H4' type='' class='' aaname=' Komentarz do zamówienia' check:innerText='Komentarz do zamówienia' /&gt;" Guid="7eee7a93-b33b-4018-a8b7-6ba08271300f" SearchSteps="FuzzySelector, CV" />
+                                                        </scg:List>
+                                                      </uix:TargetAnchorable.Anchors>
+                                                    </uix:TargetAnchorable>
+                                                  </uix:NTypeInto.Target>
+                                                  <uix:NTypeInto.VerifyOptions>
+                                                    <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                                      <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                        <InArgument x:TypeArguments="x:Boolean" />
+                                                      </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                      <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                        <InArgument x:TypeArguments="x:Double" />
+                                                      </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                    </uix:VerifyExecutionTypeIntoOptions>
+                                                  </uix:NTypeInto.VerifyOptions>
+                                                </uix:NTypeInto>
+                                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Dalej'" sap:VirtualizedContainerService.HintSize="353.6,216.8" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Version="V3">
+                                                  <uix:NClick.Target>
+                                                    <uix:TargetAnchorable BrowserURL="https://haikusushi.net/check-order" CVScreenId="93e28fd6-158f-4ca3-9cf1-145ac236f960" CvElementArea="1060, 778, 446, 61" CvTextArea="1263, 800, 42, 18" CvTextArgument="Dalej" CvType="Button" DesignTimeRectangle="1061, 781, 446, 56" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Dalej' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Dalej' tag='BUTTON' type='' class='styles_button___Dvql styles_sizeLarge__YGfzR styles_appearancePrimary__XMJoZ styles_fullWidth__x3ayC' check:innerText='Dalej' /&gt;" Guid="fdf4dbf8-d64d-4dd0-952b-7456b12155a3" InformativeScreenshot="dded189440ba332a403ad11557e1cd4f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Sprawdź zamówienie' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                      <uix:TargetAnchorable.Anchors>
+                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                          <uix:Target CVScreenId="93e28fd6-158f-4ca3-9cf1-145ac236f960" CvTextArea="1066, 632, 234, 15" CvTextArgument="= Komentarz do zamowienia" CvType="Text" DesignTimeRectangle="1061, 628, 446, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='H4' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H4' type='' class='' aaname=' Komentarz do zamówienia' check:innerText='Komentarz do zamówienia' /&gt;" Guid="02757459-597f-4006-9ce0-3f004043cf89" SearchSteps="FuzzySelector, CV" />
+                                                        </scg:List>
+                                                      </uix:TargetAnchorable.Anchors>
+                                                    </uix:TargetAnchorable>
+                                                  </uix:NClick.Target>
+                                                  <uix:NClick.VerifyOptions>
+                                                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                      <uix:VerifyExecutionOptions.Retry>
+                                                        <InArgument x:TypeArguments="x:Boolean" />
+                                                      </uix:VerifyExecutionOptions.Retry>
+                                                      <uix:VerifyExecutionOptions.Timeout>
+                                                        <InArgument x:TypeArguments="x:Double" />
+                                                      </uix:VerifyExecutionOptions.Timeout>
+                                                    </uix:VerifyExecutionOptions>
+                                                  </uix:NClick.VerifyOptions>
+                                                </uix:NClick>
+                                              </Sequence>
+                                            </If.Then>
+                                            <If.Else>
+                                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="1268.8,5761.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Komentarz do zamówienia'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1206.4,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Text="[const_comment  +  order_code + &quot; / &quot; + comment]" Version="V3">
+                                                  <uix:NTypeInto.Target>
+                                                    <uix:TargetAnchorable BrowserURL="https://haikusushi.net/check-order" CVScreenId="7589b27a-e626-450c-91a8-83a10502f5c3" CvElementArea="1060, 665, 447, 78" CvType="InputBox" DesignTimeRectangle="1061, 666, 446, 74" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TEXTAREA' type='' class='styles_textarea__9Sw56' placeholder='Wpisz swój komentarz' aaname='' /&gt;" Guid="b960eb34-774e-4e32-85cb-35ef7d9c02a7" InformativeScreenshot="a91643cb7c627cd34afa922b7b1d41fb.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Sprawdź zamówienie' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                      <uix:TargetAnchorable.Anchors>
+                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                          <uix:Target CVScreenId="7589b27a-e626-450c-91a8-83a10502f5c3" CvTextArea="1066, 632, 234, 15" CvTextArgument="= Komentarz do zamowienia" CvType="Text" DesignTimeRectangle="1061, 628, 446, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='H4' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H4' type='' class='' aaname=' Komentarz do zamówienia' check:innerText='Komentarz do zamówienia' /&gt;" Guid="19438fd9-8665-4bc6-80f2-bfa84066713a" SearchSteps="FuzzySelector, CV" />
+                                                        </scg:List>
+                                                      </uix:TargetAnchorable.Anchors>
+                                                    </uix:TargetAnchorable>
+                                                  </uix:NTypeInto.Target>
+                                                  <uix:NTypeInto.VerifyOptions>
+                                                    <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                                      <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                        <InArgument x:TypeArguments="x:Boolean" />
+                                                      </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                      <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                        <InArgument x:TypeArguments="x:Double" />
+                                                      </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                    </uix:VerifyExecutionTypeIntoOptions>
+                                                  </uix:NTypeInto.VerifyOptions>
+                                                </uix:NTypeInto>
+                                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Dalej'" sap:VirtualizedContainerService.HintSize="1206.4,225.6" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Version="V3">
+                                                  <uix:NClick.Target>
+                                                    <uix:TargetAnchorable BrowserURL="https://haikusushi.net/check-order" CVScreenId="93e28fd6-158f-4ca3-9cf1-145ac236f960" CvElementArea="1060, 778, 446, 61" CvTextArea="1263, 800, 42, 18" CvTextArgument="Dalej" CvType="Button" DesignTimeRectangle="1061, 781, 446, 56" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Dalej' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Dalej' tag='BUTTON' type='' class='styles_button___Dvql styles_sizeLarge__YGfzR styles_appearancePrimary__XMJoZ styles_fullWidth__x3ayC' check:innerText='Dalej' /&gt;" Guid="fdf4dbf8-d64d-4dd0-952b-7456b12155a3" InformativeScreenshot="dded189440ba332a403ad11557e1cd4f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Sprawdź zamówienie' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                      <uix:TargetAnchorable.Anchors>
+                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                          <uix:Target CVScreenId="93e28fd6-158f-4ca3-9cf1-145ac236f960" CvTextArea="1066, 632, 234, 15" CvTextArgument="= Komentarz do zamowienia" CvType="Text" DesignTimeRectangle="1061, 628, 446, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='H4' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H4' type='' class='' aaname=' Komentarz do zamówienia' check:innerText='Komentarz do zamówienia' /&gt;" Guid="02757459-597f-4006-9ce0-3f004043cf89" SearchSteps="FuzzySelector, CV" />
+                                                        </scg:List>
+                                                      </uix:TargetAnchorable.Anchors>
+                                                    </uix:TargetAnchorable>
+                                                  </uix:NClick.Target>
+                                                  <uix:NClick.VerifyOptions>
+                                                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                      <uix:VerifyExecutionOptions.Retry>
+                                                        <InArgument x:TypeArguments="x:Boolean" />
+                                                      </uix:VerifyExecutionOptions.Retry>
+                                                      <uix:VerifyExecutionOptions.Timeout>
+                                                        <InArgument x:TypeArguments="x:Double" />
+                                                      </uix:VerifyExecutionOptions.Timeout>
+                                                    </uix:VerifyExecutionOptions>
+                                                  </uix:NClick.VerifyOptions>
+                                                </uix:NClick>
+                                                <uix:NCheckState DisplayName="dodanie adresu dostawy [Check App State 'Adres dostawy']" sap:VirtualizedContainerService.HintSize="1206.4,275.2" sap2010:WorkflowViewState.IdRef="NCheckState_1" OutUiElement="[deleteORSearchAdresButton]" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Version="V3">
+                                                  <uix:NCheckState.IfExists>
+                                                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="952,205.6" sap2010:WorkflowViewState.IdRef="NClick_37" InUiElement="[deleteORSearchAdresButton]" KeyModifiers="None" MouseButton="Left" Version="V3">
+                                                        <uix:NClick.VerifyOptions>
+                                                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                            <uix:VerifyExecutionOptions.Retry>
+                                                              <InArgument x:TypeArguments="x:Boolean" />
+                                                            </uix:VerifyExecutionOptions.Retry>
+                                                            <uix:VerifyExecutionOptions.Timeout>
+                                                              <InArgument x:TypeArguments="x:Double" />
+                                                            </uix:VerifyExecutionOptions.Timeout>
+                                                          </uix:VerifyExecutionOptions>
+                                                        </uix:NClick.VerifyOptions>
+                                                      </uix:NClick>
+                                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="952,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_11" Text="[&quot;jest poprzedni adress, usunac i wpisać nowy&quot;]" />
+                                                      <uix:NCheckState DisplayName="Check App State 'Adres dostawy'" sap:VirtualizedContainerService.HintSize="952,1122.4" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Timeout="[3s]" Version="V3">
+                                                        <uix:NCheckState.IfExists>
+                                                          <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,832" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                                            <Sequence.Variables>
+                                                              <Variable x:TypeArguments="ui:UiElement" Name="searchAdressButton" />
+                                                            </Sequence.Variables>
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_22" Text="[&quot;searchAdressButton&quot;]" />
+                                                            <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'DIV'" FoundElement="[searchAdressButton]" sap:VirtualizedContainerService.HintSize="387.2,139.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
+                                                              <ui:WaitUiElementAppear.Target>
+                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ba63f28d-11c5-425f-b41b-bf17fdbe8a02" InformativeScreenshot="5f707795d89c067e50325a56b2fb1f25" Selector="&lt;webctrl class='styles_listItem__ZrRGT' parentid='device-type-selector' tag='DIV' /&gt;">
+                                                                  <ui:Target.TimeoutMS>
+                                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                                  </ui:Target.TimeoutMS>
+                                                                  <ui:Target.WaitForReady>
+                                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                  </ui:Target.WaitForReady>
+                                                                </ui:Target>
+                                                              </ui:WaitUiElementAppear.Target>
+                                                            </ui:WaitUiElementAppear>
+                                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="387.2,205.6" sap2010:WorkflowViewState.IdRef="NClick_34" InUiElement="[searchAdressButton]" KeyModifiers="None" MouseButton="Left" Version="V3">
+                                                              <uix:NClick.VerifyOptions>
+                                                                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                                  <uix:VerifyExecutionOptions.Retry>
+                                                                    <InArgument x:TypeArguments="x:Boolean" />
+                                                                  </uix:VerifyExecutionOptions.Retry>
+                                                                  <uix:VerifyExecutionOptions.Timeout>
+                                                                    <InArgument x:TypeArguments="x:Double" />
+                                                                  </uix:VerifyExecutionOptions.Timeout>
+                                                                </uix:VerifyExecutionOptions>
+                                                              </uix:NClick.VerifyOptions>
+                                                            </uix:NClick>
+                                                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Adres dostawy'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,279.2" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Text="[adres]" Version="V3">
+                                                              <uix:NTypeInto.Target>
+                                                                <uix:TargetAnchorable BrowserURL="https://haikusushi.net/confirm-order" DesignTimeRectangle="695, 802, 538, 60" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='styles_withShadow__qCwJG styles_isDesktop__Utr8g styles_searchable__LMbO8 styles_addressAutocompleteInputMapIconInput__ctJ2l' aaname='' /&gt;" Guid="06686098-285f-4a4b-8f60-e0cd4a1cc695" InformativeScreenshot="8c0b4659e09dab182c562e2190f57a8a.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Potwierdź zamówienie' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                                                                  <uix:TargetAnchorable.Anchors>
+                                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                      <uix:Target CVScreenId="6e01f003-eb3b-4c2c-b3c2-74b6708461f2" CvTextArea="693, 690, 130, 19" CvTextArgument="Adres dostawy" CvType="Text" DesignTimeRectangle="695, 685, 538, 30" ElementType="Text" FullSelectorArgument="&lt;webctrl class='DeliveryAddress_title__fj__p' parentid='device-type-selector' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='DeliveryAddress_title__fj__p' parentid='device-type-selector' tag='DIV' type='' aaname='Adres dostawy' check:innerText='Adres dostawy' /&gt;" Guid="f017cb1c-8a28-4a1f-812c-6f03988ae4e1" SearchSteps="FuzzySelector, CV" />
+                                                                    </scg:List>
+                                                                  </uix:TargetAnchorable.Anchors>
+                                                                </uix:TargetAnchorable>
+                                                              </uix:NTypeInto.Target>
+                                                              <uix:NTypeInto.VerifyOptions>
+                                                                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                                                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                                    <InArgument x:TypeArguments="x:Boolean" />
+                                                                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                                    <InArgument x:TypeArguments="x:Double" />
+                                                                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                                </uix:VerifyExecutionTypeIntoOptions>
+                                                              </uix:NTypeInto.VerifyOptions>
+                                                            </uix:NTypeInto>
+                                                          </Sequence>
+                                                        </uix:NCheckState.IfExists>
+                                                        <uix:NCheckState.IfNotExists>
+                                                          <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,487.2" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_25" Text="[&quot;nie wiem nie rozumiem&quot;]" />
+                                                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Adres dostawy'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,279.2" sap2010:WorkflowViewState.IdRef="NTypeInto_11" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Text="[adres]" Version="V3">
+                                                              <uix:NTypeInto.Target>
+                                                                <uix:TargetAnchorable BrowserURL="https://haikusushi.net/confirm-order" DesignTimeRectangle="695, 802, 538, 60" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='styles_withShadow__qCwJG styles_isDesktop__Utr8g styles_searchable__LMbO8 styles_addressAutocompleteInputMapIconInput__ctJ2l' aaname='' /&gt;" Guid="06686098-285f-4a4b-8f60-e0cd4a1cc695" InformativeScreenshot="8c0b4659e09dab182c562e2190f57a8a.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Potwierdź zamówienie' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                                                                  <uix:TargetAnchorable.Anchors>
+                                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                      <uix:Target CVScreenId="6e01f003-eb3b-4c2c-b3c2-74b6708461f2" CvTextArea="693, 690, 130, 19" CvTextArgument="Adres dostawy" CvType="Text" DesignTimeRectangle="695, 685, 538, 30" ElementType="Text" FullSelectorArgument="&lt;webctrl class='DeliveryAddress_title__fj__p' parentid='device-type-selector' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='DeliveryAddress_title__fj__p' parentid='device-type-selector' tag='DIV' type='' aaname='Adres dostawy' check:innerText='Adres dostawy' /&gt;" Guid="f017cb1c-8a28-4a1f-812c-6f03988ae4e1" SearchSteps="FuzzySelector, CV" />
+                                                                    </scg:List>
+                                                                  </uix:TargetAnchorable.Anchors>
+                                                                </uix:TargetAnchorable>
+                                                              </uix:NTypeInto.Target>
+                                                              <uix:NTypeInto.VerifyOptions>
+                                                                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                                                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                                    <InArgument x:TypeArguments="x:Boolean" />
+                                                                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                                    <InArgument x:TypeArguments="x:Double" />
+                                                                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                                </uix:VerifyExecutionTypeIntoOptions>
+                                                              </uix:NTypeInto.VerifyOptions>
+                                                            </uix:NTypeInto>
+                                                          </Sequence>
+                                                        </uix:NCheckState.IfNotExists>
+                                                        <uix:NCheckState.Target>
+                                                          <uix:TargetAnchorable BrowserURL="https://haikusushi.net/confirm-order" ContentHash="dTAIBqESKU-PlaQvTu2jQg" DesignTimeRectangle="540, 793, 537, 346" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='6' parentid='device-type-selector' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='styles_list__K9GPq' parentid='device-type-selector' tag='DIV' aaname='' /&gt;" Guid="f593a9b4-58c7-4294-a0da-1f7d0a9fb669" InformativeScreenshot="d8b9365d04bd3b49051988b4b0c9f005.png" Reference="CubyYPgzvkmFfn5F6jWJSQ/Dvf-9xWjSEa6TGzy7HQxrg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Potwierdź zamówienie' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                                                            <uix:TargetAnchorable.Anchors>
+                                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                <uix:Target CVScreenId="84597efd-1d7c-42d8-938e-f3ddea41af29" CvTextArea="538, 681, 130, 20" CvTextArgument="Adres dostawy" CvType="Text" DesignTimeRectangle="540, 676, 537, 30" ElementType="Text" FullSelectorArgument="&lt;webctrl class='DeliveryAddress_title__fj__p' parentid='device-type-selector' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='DeliveryAddress_title__fj__p' parentid='device-type-selector' tag='DIV' type='' aaname='Adres dostawy' check:innerText='Adres dostawy' /&gt;" Guid="a1a3182a-68c9-413b-84e5-69e63003bc5e" SearchSteps="FuzzySelector, CV" />
+                                                              </scg:List>
+                                                            </uix:TargetAnchorable.Anchors>
+                                                          </uix:TargetAnchorable>
+                                                        </uix:NCheckState.Target>
+                                                      </uix:NCheckState>
+                                                      <uix:NCheckState DisplayName="Check App State 'Adres dostawy'" sap:VirtualizedContainerService.HintSize="952,559.2" sap2010:WorkflowViewState.IdRef="NCheckState_8" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Version="V3">
+                                                        <uix:NCheckState.IfExists>
+                                                          <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,308.8" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Pawia 5Kraków, Polska'" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NClick_38" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Version="V3">
+                                                              <uix:NClick.Target>
+                                                                <uix:TargetAnchorable BrowserURL="https://haikusushi.net/confirm-order" DesignTimeRectangle="696, 623, 536, 71" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Pawia 5Kraków, Polska' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Pawia 5Kraków, Polska' tag='BUTTON' type='' class='styles_address-autocomplete-item__RsnpA styles_address-autocomplete-item-active___3zFv' /&gt;" Guid="f5e75215-5b64-432a-9ea7-57784c74157e" InformativeScreenshot="aee6386b7361b7385ac8c0c4d02a09f4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Potwierdź zamówienie' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                                                                  <uix:TargetAnchorable.Anchors>
+                                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                      <uix:Target DesignTimeRectangle="695, 552, 538, 60" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='styles_withShadow__qCwJG styles_isDesktop__Utr8g styles_searchable__LMbO8 styles_addressAutocompleteInputMapIconInput__ctJ2l' aaname='' /&gt;" Guid="87eb86c1-2402-48e7-96ac-2a11fed45454" SearchSteps="FuzzySelector" />
+                                                                    </scg:List>
+                                                                  </uix:TargetAnchorable.Anchors>
+                                                                </uix:TargetAnchorable>
+                                                              </uix:NClick.Target>
+                                                              <uix:NClick.VerifyOptions>
+                                                                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                                  <uix:VerifyExecutionOptions.Retry>
+                                                                    <InArgument x:TypeArguments="x:Boolean" />
+                                                                  </uix:VerifyExecutionOptions.Retry>
+                                                                  <uix:VerifyExecutionOptions.Timeout>
+                                                                    <InArgument x:TypeArguments="x:Double" />
+                                                                  </uix:VerifyExecutionOptions.Timeout>
+                                                                </uix:VerifyExecutionOptions>
+                                                              </uix:NClick.VerifyOptions>
+                                                            </uix:NClick>
+                                                          </Sequence>
+                                                        </uix:NCheckState.IfExists>
+                                                        <uix:NCheckState.IfNotExists>
+                                                          <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,200.8" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,110.4" sap2010:WorkflowViewState.IdRef="MessageBox_31" Text="[&quot;wpisac adress recznie&quot;]" />
+                                                          </Sequence>
+                                                        </uix:NCheckState.IfNotExists>
+                                                        <uix:NCheckState.Target>
+                                                          <uix:TargetAnchorable BrowserURL="https://haikusushi.net/confirm-order" DesignTimeRectangle="695, 622, 538, 326" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl class='styles_address-autocomplete-list__dSikc' parentid='device-type-selector' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='styles_address-autocomplete-list__dSikc' parentid='device-type-selector' tag='DIV' type='' aaname='' /&gt;" Guid="99b36116-426b-4353-879b-0d226a6052c3" InformativeScreenshot="70e89993f4a502f03b4efcdd5358eb35.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Potwierdź zamówienie' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                                                            <uix:TargetAnchorable.Anchors>
+                                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                <uix:Target CVScreenId="5ea979c6-bc4f-479c-847a-6226982b7703" CvTextArea="693, 440, 130, 20" CvTextArgument="Adres dostawy" CvType="Text" DesignTimeRectangle="695, 435, 538, 30" ElementType="Text" FullSelectorArgument="&lt;webctrl class='DeliveryAddress_title__fj__p' parentid='device-type-selector' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='DeliveryAddress_title__fj__p' parentid='device-type-selector' tag='DIV' type='' aaname='Adres dostawy' check:innerText='Adres dostawy' /&gt;" Guid="eb908cf9-236e-42c3-a3ce-dd9d66182da2" SearchSteps="FuzzySelector, CV" />
+                                                              </scg:List>
+                                                            </uix:TargetAnchorable.Anchors>
+                                                          </uix:TargetAnchorable>
+                                                        </uix:NCheckState.Target>
+                                                      </uix:NCheckState>
+                                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="952,108.8" sap2010:WorkflowViewState.IdRef="MessageBox_18" Text="[&quot;dodano adres:&quot;+ vbCrLf +adres]" />
+                                                    </Sequence>
+                                                  </uix:NCheckState.IfExists>
+                                                  <uix:NCheckState.IfNotExists>
+                                                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,24.8" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,110.4" sap2010:WorkflowViewState.IdRef="MessageBox_12" Text="[&quot;nie ma adresu ui contener&quot;]" />
+                                                    </Sequence>
+                                                  </uix:NCheckState.IfNotExists>
+                                                  <uix:NCheckState.Target>
+                                                    <uix:TargetAnchorable BrowserURL="https://haikusushi.net/confirm-order" CVScreenId="a715eb5a-e3a9-4460-a735-72f5f9f4b118" ContentHash="S7Rx7xkIPE-joLR2S2HlSw" CvElementArea="694, 724, 539, 75" CvType="InputBox" DesignTimeRectangle="1183, 746, 30, 30" DesignTimeScaleFactor="1.25" ElementType="Icon" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;svg' idx='2' tag='svg' /&gt;" FuzzyAccuracy="0.62" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='svg' aaname='' /&gt;" Guid="de1dade2-f0bb-4bae-a85c-2ba19af11080" InformativeScreenshot="9a1b9ea3b62a55798d7a1cad9c534f40.png" Reference="CubyYPgzvkmFfn5F6jWJSQ/t2dcNd4bR0G60a645zDYSw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Potwierdź zamówienie' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                      <uix:TargetAnchorable.Anchors>
+                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                          <uix:Target CVScreenId="a715eb5a-e3a9-4460-a735-72f5f9f4b118" CvTextArea="693, 690, 130, 19" CvTextArgument="Adres dostawy" CvType="Text" DesignTimeRectangle="695, 685, 538, 30" ElementType="Text" FullSelectorArgument="&lt;webctrl class='DeliveryAddress_title__fj__p' parentid='device-type-selector' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='DeliveryAddress_title__fj__p' parentid='device-type-selector' tag='DIV' type='' aaname='Adres dostawy' check:innerText='Adres dostawy' /&gt;" Guid="c4b4aa64-7db7-4b62-bfe5-f534288d5ef5" SearchSteps="FuzzySelector, CV" />
+                                                        </scg:List>
+                                                      </uix:TargetAnchorable.Anchors>
+                                                    </uix:TargetAnchorable>
+                                                  </uix:NCheckState.Target>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </uix:NCheckState>
+                                                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="1206.4,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_23" Text="[&quot;dodawanie czasu dostawy&quot;]">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </ui:MessageBox>
+                                                <ueab:ReadCellValueX Cell="[CurrentRow.ByIndex(1)]" DisplayName="Read Cell Value" GetFormattedText="True" sap:VirtualizedContainerService.HintSize="1206.4,192" sap2010:WorkflowViewState.IdRef="ReadCellValueX_5">
+                                                  <ueab:ReadCellValueX.SaveTo>
+                                                    <OutArgument x:TypeArguments="x:String">[delivery_time]</OutArgument>
+                                                  </ueab:ReadCellValueX.SaveTo>
+                                                </ueab:ReadCellValueX>
+                                                <If Condition="[delivery_time &gt; &quot;15:00&quot;]" sap:VirtualizedContainerService.HintSize="1206.4,2580.8" sap2010:WorkflowViewState.IdRef="If_7">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <If.Then>
+                                                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="496,193.6" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_15">
+                                                        <Assign.To>
+                                                          <OutArgument x:TypeArguments="x:String">[comment_for_delivery]</OutArgument>
+                                                        </Assign.To>
+                                                        <Assign.Value>
+                                                          <InArgument x:TypeArguments="x:String" xml:space="preserve">[comment_for_delivery + "/  CZAS DOSTAWY: "+delivery_time]</InArgument>
+                                                        </Assign.Value>
+                                                      </Assign>
+                                                    </Sequence>
+                                                  </If.Then>
+                                                  <If.Else>
+                                                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="1172.8,2216.8" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <uix:NCheckState DisplayName="Check App State 'Kiedy?'" sap:VirtualizedContainerService.HintSize="1110.4,2128" sap2010:WorkflowViewState.IdRef="NCheckState_2" OutUiElement="[selectTimeBtn]" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Version="V3">
+                                                        <uix:NCheckState.IfExists>
+                                                          <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="608,1886.4" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="545.6,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_15" Text="[&quot;wybrac czas:  &quot; +delivery_time]" />
+                                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="545.6,205.6" sap2010:WorkflowViewState.IdRef="NClick_29" InUiElement="[selectTimeBtn]" KeyModifiers="None" MouseButton="Left" Version="V3">
+                                                              <uix:NClick.VerifyOptions>
+                                                                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                                  <uix:VerifyExecutionOptions.Retry>
+                                                                    <InArgument x:TypeArguments="x:Boolean" />
+                                                                  </uix:VerifyExecutionOptions.Retry>
+                                                                  <uix:VerifyExecutionOptions.Timeout>
+                                                                    <InArgument x:TypeArguments="x:Double" />
+                                                                  </uix:VerifyExecutionOptions.Timeout>
+                                                                </uix:VerifyExecutionOptions>
+                                                              </uix:NClick.VerifyOptions>
+                                                            </uix:NClick>
+                                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Click '1300''" sap:VirtualizedContainerService.HintSize="545.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_30" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Version="V3">
+                                                              <uix:NClick.Target>
+                                                                <uix:TargetAnchorable BrowserURL="https://haikusushi.net/confirm-order" CVScreenId="a2e8d29c-142a-4376-b8d3-bdaf5981d22f" ContentHash="DK08rJltPUWCiu6SrvRDQQ" CvElementArea="1357, 685, 143, 52" CvType="InputBox" DesignTimeRectangle="1458, 699, 24, 24" DesignTimeScaleFactor="1" ElementType="Icon" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;div&amp;gt;svg' idx='4' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='' tag='svg' aaname='' /&gt;" Guid="e1492077-4eba-4778-8df1-2e3d91c2c7cd" InformativeScreenshot="d0ca5a894684ef9eefff63bb74e1d7ce.png" Reference="CubyYPgzvkmFfn5F6jWJSQ/FPfQhO2XXkGcUmfIh7lNOg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Potwierdź zamówienie' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                                  <uix:TargetAnchorable.Anchors>
+                                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                      <uix:Target CVScreenId="a2e8d29c-142a-4376-b8d3-bdaf5981d22f" CvTextArea="1068, 659, 106, 18" CvTextArgument="Wybierz czas" CvType="Text" DesignTimeRectangle="1069, 655, 282, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Wybierz czas' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='device-type-selector' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Wybierz czas' type='' parentid='device-type-selector' tag='DIV' class='style_label__xb1_V' check:innerText='Wybierz czas' /&gt;" Guid="dc23399a-a2af-403a-a5c9-f6603d61f320" SearchSteps="FuzzySelector, CV" />
+                                                                    </scg:List>
+                                                                  </uix:TargetAnchorable.Anchors>
+                                                                </uix:TargetAnchorable>
+                                                              </uix:NClick.Target>
+                                                              <uix:NClick.VerifyOptions>
+                                                                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                                  <uix:VerifyExecutionOptions.Retry>
+                                                                    <InArgument x:TypeArguments="x:Boolean" />
+                                                                  </uix:VerifyExecutionOptions.Retry>
+                                                                  <uix:VerifyExecutionOptions.Timeout>
+                                                                    <InArgument x:TypeArguments="x:Double" />
+                                                                  </uix:VerifyExecutionOptions.Timeout>
+                                                                </uix:VerifyExecutionOptions>
+                                                              </uix:NClick.VerifyOptions>
+                                                            </uix:NClick>
+                                                            <ui:FindChildren Children="[time_selector_cildren]" DisplayName="Find Children 'DIV'" Filter="&lt;webctrl /&gt;" sap:VirtualizedContainerService.HintSize="545.6,139.2" sap2010:WorkflowViewState.IdRef="FindChildren_4" Scope="FIND_CHILDREN">
+                                                              <ui:FindChildren.Target>
+                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="47f504a2-bb49-4724-aeb7-3e29df748eba" InformativeScreenshot="f9962fd32d46725adc3f8a28f97d53f4" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='4' parentid='device-type-selector' tag='DIV' /&gt;">
+                                                                  <ui:Target.TimeoutMS>
+                                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                                  </ui:Target.TimeoutMS>
+                                                                  <ui:Target.WaitForReady>
+                                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                  </ui:Target.WaitForReady>
+                                                                </ui:Target>
+                                                              </ui:FindChildren.Target>
+                                                            </ui:FindChildren>
+                                                            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="545.6,1108" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[time_selector_cildren]">
+                                                              <ui:ForEach.Body>
+                                                                <ActivityAction x:TypeArguments="ui:UiElement">
+                                                                  <ActivityAction.Argument>
+                                                                    <DelegateInArgument x:TypeArguments="ui:UiElement" Name="currentUiElement" />
+                                                                  </ActivityAction.Argument>
+                                                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,917.6" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                                                    <Sequence.Variables>
+                                                                      <Variable x:TypeArguments="x:String" Name="aaname_time" />
+                                                                    </Sequence.Variables>
+                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                      </scg:Dictionary>
+                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                    <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="aaname" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="449.6,220" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" InUiElement="[currentUiElement]" Result="[aaname_time]" Version="V3" />
+                                                                    <If Condition="[aaname_time = delivery_time]" sap:VirtualizedContainerService.HintSize="449.6,608.8" sap2010:WorkflowViewState.IdRef="If_5">
+                                                                      <If.Then>
+                                                                        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,342.4" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                                                          <sap:WorkflowViewStateService.ViewState>
+                                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                            </scg:Dictionary>
+                                                                          </sap:WorkflowViewStateService.ViewState>
+                                                                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="353.6,205.6" sap2010:WorkflowViewState.IdRef="NClick_31" InUiElement="[currentUiElement]" KeyModifiers="None" MouseButton="Left" Version="V3">
+                                                                            <uix:NClick.VerifyOptions>
+                                                                              <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                                                <uix:VerifyExecutionOptions.Retry>
+                                                                                  <InArgument x:TypeArguments="x:Boolean" />
+                                                                                </uix:VerifyExecutionOptions.Retry>
+                                                                                <uix:VerifyExecutionOptions.Timeout>
+                                                                                  <InArgument x:TypeArguments="x:Double" />
+                                                                                </uix:VerifyExecutionOptions.Timeout>
+                                                                              </uix:VerifyExecutionOptions>
+                                                                            </uix:NClick.VerifyOptions>
+                                                                          </uix:NClick>
+                                                                          <ui:Break sap:VirtualizedContainerService.HintSize="353.6,48" sap2010:WorkflowViewState.IdRef="Break_4" />
+                                                                        </Sequence>
+                                                                      </If.Then>
+                                                                      <If.Else>
+                                                                        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                                                          <sap:WorkflowViewStateService.ViewState>
+                                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                            </scg:Dictionary>
+                                                                          </sap:WorkflowViewStateService.ViewState>
+                                                                        </Sequence>
+                                                                      </If.Else>
+                                                                    </If>
+                                                                  </Sequence>
+                                                                </ActivityAction>
+                                                              </ui:ForEach.Body>
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                            </ui:ForEach>
+                                                          </Sequence>
+                                                        </uix:NCheckState.IfExists>
+                                                        <uix:NCheckState.IfNotExists>
+                                                          <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,200.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,110.4" sap2010:WorkflowViewState.IdRef="MessageBox_16" Text="[&quot;nie ma czasu elementu&quot;]" />
+                                                          </Sequence>
+                                                        </uix:NCheckState.IfNotExists>
+                                                        <uix:NCheckState.Target>
+                                                          <uix:TargetAnchorable BrowserURL="https://haikusushi.net/confirm-order" CVScreenId="f0cf5313-fab8-43c0-84a8-67e38bc8e487" CvElementArea="966, 607, 267, 101" CvType="Button" DesignTimeRectangle="969, 607, 264, 114" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='8' parentid='device-type-selector' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='TimeDateSelector_block__5pkBR' parentid='device-type-selector' tag='DIV' aaname='' check:innerText='Wybierz czas&amp;#xD;&amp;#xA;WYBIERZ CZAS' /&gt;" Guid="bca33873-1e55-42df-81b6-867aaf23c28f" InformativeScreenshot="5862ec1c427b54da56de9c71cc618e69.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Potwierdź zamówienie' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                            <uix:TargetAnchorable.Anchors>
+                                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                <uix:Target CVScreenId="f0cf5313-fab8-43c0-84a8-67e38bc8e487" CvTextArea="694, 571, 58, 21" CvTextArgument="Kiedy?" CvType="Text" DesignTimeRectangle="695, 567, 538, 30" ElementType="Text" FullSelectorArgument="&lt;webctrl class='TimeDateSelector_title__wsDBE' parentid='device-type-selector' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='TimeDateSelector_title__wsDBE' parentid='device-type-selector' tag='DIV' type='' aaname='Kiedy?' check:innerText='Kiedy?' /&gt;" Guid="3247b186-d44d-495e-84ce-7a994bc6faf9" SearchSteps="FuzzySelector, CV" />
+                                                              </scg:List>
+                                                            </uix:TargetAnchorable.Anchors>
+                                                          </uix:TargetAnchorable>
+                                                        </uix:NCheckState.Target>
+                                                      </uix:NCheckState>
+                                                    </Sequence>
+                                                  </If.Else>
+                                                </If>
+                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1206.4,176" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn" Message="[&quot;comment_for_delive extra_comment_flat_number : &quot;+ comment_for_delivery+ &quot; &quot;+ extra_comment_flat_number]" />
+                                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Komentarz dla kuriera'" sap:VirtualizedContainerService.HintSize="1206.4,225.6" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Version="V3">
+                                                  <uix:NClick.Target>
+                                                    <uix:TargetAnchorable BrowserURL="https://haikusushi.net/confirm-order" CVScreenId="13a1db63-62e0-4ae6-ade7-ef79b5cb59f7" CvElementArea="1068, 654, 433, 58" CvType="InputBox" DesignTimeRectangle="1069, 657, 430, 54" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TEXTAREA' type='' class='Textarea_root__pAJyC' placeholder='Klatka schodowa / mieszkanie / piętro / inne' aaname='' /&gt;" Guid="c486d394-b76b-46de-bcb0-cb319b41f99b" InformativeScreenshot="ce1194007073d6f44f65d01ac634f7c0.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Potwierdź zamówienie' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                      <uix:TargetAnchorable.Anchors>
+                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                          <uix:Target CVScreenId="13a1db63-62e0-4ae6-ade7-ef79b5cb59f7" CvTextArea="1068, 630, 153, 13" CvTextArgument="Komentarz dla kuriera:" CvType="Text" DesignTimeRectangle="1069, 625, 430, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Komentarz dla kuriera:' class='DeliveryAddress_title__fj__p' parentid='device-type-selector' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Komentarz dla kuriera:' class='DeliveryAddress_title__fj__p' parentid='device-type-selector' tag='DIV' type='' check:innerText='Komentarz dla kuriera:' /&gt;" Guid="79af8324-bac2-4c86-b422-b186dfee9c4b" SearchSteps="FuzzySelector, CV" />
+                                                        </scg:List>
+                                                      </uix:TargetAnchorable.Anchors>
+                                                    </uix:TargetAnchorable>
+                                                  </uix:NClick.Target>
+                                                  <uix:NClick.VerifyOptions>
+                                                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                      <uix:VerifyExecutionOptions.Retry>
+                                                        <InArgument x:TypeArguments="x:Boolean" />
+                                                      </uix:VerifyExecutionOptions.Retry>
+                                                      <uix:VerifyExecutionOptions.Timeout>
+                                                        <InArgument x:TypeArguments="x:Double" />
+                                                      </uix:VerifyExecutionOptions.Timeout>
+                                                    </uix:VerifyExecutionOptions>
+                                                  </uix:NClick.VerifyOptions>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </uix:NClick>
+                                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBetweenKeys="0.5" DisplayName="Type Into 'Komentarz dla kuriera'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1206.4,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Text="[comment_for_delivery+ &quot; &quot;+ extra_comment_flat_number]" Version="V3">
+                                                  <uix:NTypeInto.Target>
+                                                    <uix:TargetAnchorable BrowserURL="https://haikusushi.net/confirm-order" CVScreenId="13a1db63-62e0-4ae6-ade7-ef79b5cb59f7" CvElementArea="1068, 654, 433, 58" CvType="InputBox" DesignTimeRectangle="1069, 657, 430, 54" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='TEXTAREA' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TEXTAREA' type='' class='Textarea_root__pAJyC' placeholder='Klatka schodowa / mieszkanie / piętro / inne' aaname='' /&gt;" Guid="230d1531-5a2b-4711-90c2-48c476093f97" InformativeScreenshot="ce1194007073d6f44f65d01ac634f7c0.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Potwierdź zamówienie' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                      <uix:TargetAnchorable.Anchors>
+                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                          <uix:Target CVScreenId="13a1db63-62e0-4ae6-ade7-ef79b5cb59f7" CvTextArea="1068, 630, 153, 13" CvTextArgument="Komentarz dla kuriera:" CvType="Text" DesignTimeRectangle="1069, 625, 430, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Komentarz dla kuriera:' class='DeliveryAddress_title__fj__p' parentid='device-type-selector' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Komentarz dla kuriera:' class='DeliveryAddress_title__fj__p' parentid='device-type-selector' tag='DIV' type='' check:innerText='Komentarz dla kuriera:' /&gt;" Guid="7d934152-795b-415d-b99d-b315580416af" SearchSteps="FuzzySelector, CV" />
+                                                        </scg:List>
+                                                      </uix:TargetAnchorable.Anchors>
+                                                    </uix:TargetAnchorable>
+                                                  </uix:NTypeInto.Target>
+                                                  <uix:NTypeInto.VerifyOptions>
+                                                    <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                                                      <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                        <InArgument x:TypeArguments="x:Boolean" />
+                                                      </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                      <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                        <InArgument x:TypeArguments="x:Double" />
+                                                      </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                    </uix:VerifyExecutionTypeIntoOptions>
+                                                  </uix:NTypeInto.VerifyOptions>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </uix:NTypeInto>
+                                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBetweenKeys="0.5" DisplayName="Type Into 'Telefon'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1206.4,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_13" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Text="[&quot;Zamówienia Lunching  &quot; + adres]" Version="V3">
+                                                  <uix:NTypeInto.Target>
+                                                    <uix:TargetAnchorable BrowserURL="https://haikusushi.net/confirm-order" CVScreenId="dcd0f493-e3ae-42c6-86c9-0fb809610e78" ContentHash="mugCxEd6JkKlqDUL7Mk4HA" CvElementArea="694, 690, 541, 75" CvType="InputBox" DesignTimeRectangle="695, 692, 538, 70" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='styles_sizeLarge__NPbXs styles_withShadow__qCwJG styles_isDesktop__Utr8g' aaname='' /&gt;" Guid="f797fbd8-a019-40b5-9685-b661ba38e625" InformativeScreenshot="a758eea7f98cd5d144c1a05d7952cb60.png" IsResponsive="True" Reference="CubyYPgzvkmFfn5F6jWJSQ/bDGLPBnSbEGBRHs4IG4FrQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Potwierdź zamówienie' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                      <uix:TargetAnchorable.Anchors>
+                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                          <uix:Target CVScreenId="dcd0f493-e3ae-42c6-86c9-0fb809610e78" CvTextArea="693, 663, 96, 18" CvTextArgument="Twoje imie *" CvType="Text" DesignTimeRectangle="695, 662, 538, 20" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Twoje imię' parentid='device-type-selector' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Twoje imię' parentid='device-type-selector' tag='DIV' type='' class='Contacts_label__zoZLn Contacts_required___IQx1' check:innerText='Twoje imię' /&gt;" Guid="0766a519-fcb3-47f7-9268-dead0c08ccee" SearchSteps="FuzzySelector, CV" />
+                                                        </scg:List>
+                                                      </uix:TargetAnchorable.Anchors>
+                                                    </uix:TargetAnchorable>
+                                                  </uix:NTypeInto.Target>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </uix:NTypeInto>
+                                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBetweenKeys="0.5" DisplayName="Type Into 'Telefon'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1206.4,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Text="791792424" Version="V3">
+                                                  <uix:NTypeInto.Target>
+                                                    <uix:TargetAnchorable BrowserURL="https://haikusushi.net/confirm-order" CVScreenId="74a069c3-700d-4e95-9c47-4fde879b64b2" CvTextArea="1107, 1028, 32, 14" CvTextArgument="+48" CvType="Text" DesignTimeRectangle="1061, 1008, 446, 56" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='PhoneInput' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='PhoneInput' tag='INPUT' type='tel' class='PhoneInputInput' aaname='' /&gt;" Guid="6ae99675-20e4-429a-a177-51fd0a581027" InformativeScreenshot="6631c0666a34edb1dc807ace99078340.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Potwierdź zamówienie' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                      <uix:TargetAnchorable.Anchors>
+                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                          <uix:Target CVScreenId="74a069c3-700d-4e95-9c47-4fde879b64b2" CvTextArea="1060, 985, 57, 13" CvTextArgument="Telefon *" CvType="Text" DesignTimeRectangle="1061, 984, 446, 16" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Telefon' parentid='device-type-selector' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Telefon' parentid='device-type-selector' tag='DIV' type='' class='Contacts_label__zoZLn Contacts_required___IQx1' check:innerText='Telefon' /&gt;" Guid="c0411791-c947-4eed-93b6-e62d6fdcaee0" SearchSteps="FuzzySelector, CV" />
+                                                        </scg:List>
+                                                      </uix:TargetAnchorable.Anchors>
+                                                    </uix:TargetAnchorable>
+                                                  </uix:NTypeInto.Target>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </uix:NTypeInto>
+                                                <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="1206.4,56.8" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="10" Version="V3">
+                                                  <uix:NMouseScroll.SearchedElement>
+                                                    <uix:SearchedElement>
+                                                      <uix:SearchedElement.Target>
+                                                        <uix:TargetAnchorable BrowserURL="https://haikusushi.net/confirm-order" DesignTimeRectangle="530, 932, 557, 82" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl class='TermsSummary_body__is_Lr' parentid='device-type-selector' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='TermsSummary_body__is_Lr' parentid='device-type-selector' tag='DIV' type='' aaname='' check:innerText='Dostawać rabaty, oferty lojalnościowe i inne aktualizacje przez e-mail, SMS. Pokaż więcej' /&gt;" Guid="4a1d2f73-f2b9-4438-85f3-36c3c30885ad" InformativeScreenshot="b571f787f649798e8097dbc39150155c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Potwierdź zamówienie' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                              <uix:Target CVScreenId="422ab530-7fb9-4ca1-a876-42e3cd752641" CvElementArea="527, 1042, 560, 76" CvTextArea="759, 1068, 97, 23" CvTextArgument="Nastepny" CvType="Button" DesignTimeRectangle="530, 1045, 557, 70" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Następny' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Następny' tag='BUTTON' type='' class='styles_button___Dvql styles_sizeLarge__YGfzR styles_appearancePrimary__XMJoZ styles_fullWidth__x3ayC' check:innerText='Następny' /&gt;" Guid="6a7c916c-73d0-4256-ad63-65c3cf1dbf5b" SearchSteps="FuzzySelector, CV" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:SearchedElement.Target>
+                                                      <uix:SearchedElement.Timeout>
+                                                        <InArgument x:TypeArguments="x:Double" />
+                                                      </uix:SearchedElement.Timeout>
+                                                    </uix:SearchedElement>
+                                                  </uix:NMouseScroll.SearchedElement>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </uix:NMouseScroll>
+                                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Dostawae rabaty,'" sap:VirtualizedContainerService.HintSize="1206.4,225.6" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Version="V3">
+                                                  <uix:NClick.Target>
+                                                    <uix:TargetAnchorable BrowserURL="https://haikusushi.net/confirm-order" CVScreenId="1de4092f-4d2f-42c1-bfda-eadb2be6c1ee" CvElementArea="1077, 1229, 34, 35" CvType="CheckBox" DesignTimeRectangle="1082, 1234, 24, 24" DesignTimeScaleFactor="1" ElementType="Icon" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;svg' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='svg' class='' aaname='' /&gt;" Guid="dad8ede5-9b96-4623-b2a3-8ae197a619fb" InformativeScreenshot="0b8c3dc59b82d006c878a34db1b1f93f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Potwierdź zamówienie' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                      <uix:TargetAnchorable.Anchors>
+                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                          <uix:Target CVScreenId="1de4092f-4d2f-42c1-bfda-eadb2be6c1ee" CvTextArea="1125, 1228, 292, 17" CvTextArgument="Dostawae rabaty, oferty lojalnosciowe i inne" CvType="Text" DesignTimeRectangle="1125, 1228, 292, 17" ElementType="Text" Guid="371684fa-84ef-462d-81f7-40db292c44e0" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                                                        </scg:List>
+                                                      </uix:TargetAnchorable.Anchors>
+                                                    </uix:TargetAnchorable>
+                                                  </uix:NClick.Target>
+                                                  <uix:NClick.VerifyOptions>
+                                                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                      <uix:VerifyExecutionOptions.Retry>
+                                                        <InArgument x:TypeArguments="x:Boolean" />
+                                                      </uix:VerifyExecutionOptions.Retry>
+                                                      <uix:VerifyExecutionOptions.Timeout>
+                                                        <InArgument x:TypeArguments="x:Double" />
+                                                      </uix:VerifyExecutionOptions.Timeout>
+                                                    </uix:VerifyExecutionOptions>
+                                                  </uix:NClick.VerifyOptions>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </uix:NClick>
+                                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Następny'" sap:VirtualizedContainerService.HintSize="1206.4,56.8" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Version="V3">
+                                                  <uix:NClick.Target>
+                                                    <uix:TargetAnchorable BrowserURL="https://haikusushi.net/confirm-order" CVScreenId="c7dd6b46-8e7b-4f36-afc8-b6fcf84810e0" CvElementArea="1059, 1302, 450, 60" CvTextArea="1245, 1323, 77, 19" CvTextArgument="Nastepny" CvType="Button" DesignTimeRectangle="1061, 1304, 446, 56" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Następny' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Następny' tag='BUTTON' type='' class='styles_button___Dvql styles_sizeLarge__YGfzR styles_appearancePrimary__XMJoZ styles_fullWidth__x3ayC' check:innerText='Następny' /&gt;" Guid="9c5d6214-10e3-4dbe-b4ac-9f6dc614f29c" InformativeScreenshot="b79de711de7dd335a38550c05b86e273.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Potwierdź zamówienie' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                      <uix:TargetAnchorable.Anchors>
+                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                          <uix:Target DesignTimeRectangle="1126, 1226, 364, 40" FullSelectorArgument="&lt;webctrl class='TermsSummary_text__G_V37' parentid='device-type-selector' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='TermsSummary_text__G_V37' parentid='device-type-selector' tag='DIV' type='' aaname='Dostawać rabaty, oferty lojalnościowe i inne aktualizacje przez e-mail, SMS. ' check:innerText='Dostawać rabaty, oferty lojalnościowe i inne aktualizacje przez e-mail, SMS. Pokaż więcej' /&gt;" Guid="a6a97c2a-da34-47d6-9055-52052ba3c38f" SearchSteps="FuzzySelector" />
+                                                        </scg:List>
+                                                      </uix:TargetAnchorable.Anchors>
+                                                    </uix:TargetAnchorable>
+                                                  </uix:NClick.Target>
+                                                  <uix:NClick.VerifyOptions>
+                                                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                      <uix:VerifyExecutionOptions.Retry>
+                                                        <InArgument x:TypeArguments="x:Boolean" />
+                                                      </uix:VerifyExecutionOptions.Retry>
+                                                      <uix:VerifyExecutionOptions.Timeout>
+                                                        <InArgument x:TypeArguments="x:Double" />
+                                                      </uix:VerifyExecutionOptions.Timeout>
+                                                    </uix:VerifyExecutionOptions>
+                                                  </uix:NClick.VerifyOptions>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </uix:NClick>
+                                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Google Pay'" sap:VirtualizedContainerService.HintSize="1206.4,56.8" sap2010:WorkflowViewState.IdRef="NClick_20" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Version="V3">
+                                                  <uix:NClick.Target>
+                                                    <uix:TargetAnchorable BrowserURL="https://haikusushi.net/confirm-order" CVScreenId="f3d438d9-0913-4769-9ed3-e8053ede35fa" CvTextArea="1093, 816, 126, 18" CvTextArgument="Pay Google Pay" CvType="Text" DesignTimeRectangle="1061, 797, 446, 56" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Google Pay' parentid='device-type-selector' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Google Pay' parentid='device-type-selector' tag='BUTTON' type='' class='styles_button___Dvql styles_sizeLarge__YGfzR styles_appearanceStroke__LKd1h styles_withShadow__qhvq4 styles_fillContent__OccwK styles_fullWidth__x3ayC styles_head__RKBtb' check:innerText='Google Pay' /&gt;" Guid="59900121-50da-409b-b757-986f193f3994" InformativeScreenshot="3ca0238b60ad455ffc185336185e49e0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Potwierdź zamówienie' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                      <uix:TargetAnchorable.Anchors>
+                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                          <uix:Target CVScreenId="f3d438d9-0913-4769-9ed3-e8053ede35fa" CvTextArea="1060, 669, 171, 23" CvTextArgument="Metoda platnosci" CvType="Text" DesignTimeRectangle="1061, 668, 170, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='modal-pay-roll-up-js' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='modal-pay-roll-up-js' tag='DIV' type='' class='styles_modal-title__cLiVp' aaname='Metoda płatności' check:innerText='Metoda płatności' /&gt;" Guid="3b4d2868-85cc-42e9-ad48-e10d3f0dfb86" SearchSteps="FuzzySelector, CV" />
+                                                        </scg:List>
+                                                      </uix:TargetAnchorable.Anchors>
+                                                    </uix:TargetAnchorable>
+                                                  </uix:NClick.Target>
+                                                  <uix:NClick.VerifyOptions>
+                                                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                      <uix:VerifyExecutionOptions.Retry>
+                                                        <InArgument x:TypeArguments="x:Boolean" />
+                                                      </uix:VerifyExecutionOptions.Retry>
+                                                      <uix:VerifyExecutionOptions.Timeout>
+                                                        <InArgument x:TypeArguments="x:Double" />
+                                                      </uix:VerifyExecutionOptions.Timeout>
+                                                    </uix:VerifyExecutionOptions>
+                                                  </uix:NClick.VerifyOptions>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </uix:NClick>
+                                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Kartą przy odbiorze'" sap:VirtualizedContainerService.HintSize="1206.4,56.8" sap2010:WorkflowViewState.IdRef="NClick_21" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Version="V3">
+                                                  <uix:NClick.Target>
+                                                    <uix:TargetAnchorable BrowserURL="https://haikusushi.net/confirm-order" CVScreenId="ac6807a2-21c9-4c50-9cc8-0a5248665822" CvTextArea="1074, 708, 69, 18" CvTextArgument="Gotowka" CvType="Text" DesignTimeRectangle="1074, 704, 420, 24" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl aaname='Gotówką' parentid='device-type-selector' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Gotówką' parentid='device-type-selector' tag='DIV' type='' class='styles_payment-method-selector-label__3DoAk' check:innerText='Gotówką' /&gt;" Guid="90acde60-16f9-4c23-81da-2d5547328d95" InformativeScreenshot="c2b05bc5595c2769640d7db6443328c6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Potwierdź zamówienie' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                      <uix:TargetAnchorable.Anchors>
+                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                          <uix:Target CVScreenId="ac6807a2-21c9-4c50-9cc8-0a5248665822" CvTextArea="1073, 659, 154, 17" CvTextArgument="Karta przy odbiorze" CvType="Text" DesignTimeRectangle="1074, 655, 420, 24" FullSelectorArgument="&lt;webctrl aaname='Kartą przy odbiorze' parentid='device-type-selector' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Kartą przy odbiorze' parentid='device-type-selector' tag='DIV' type='' class='styles_payment-method-selector-label__3DoAk' check:innerText='Kartą przy odbiorze' /&gt;" Guid="e15e639b-6042-4390-bff4-84abc4376677" SearchSteps="FuzzySelector, CV" />
+                                                        </scg:List>
+                                                      </uix:TargetAnchorable.Anchors>
+                                                    </uix:TargetAnchorable>
+                                                  </uix:NClick.Target>
+                                                  <uix:NClick.VerifyOptions>
+                                                    <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                                      <uix:VerifyExecutionOptions.Retry>
+                                                        <InArgument x:TypeArguments="x:Boolean" />
+                                                      </uix:VerifyExecutionOptions.Retry>
+                                                      <uix:VerifyExecutionOptions.Timeout>
+                                                        <InArgument x:TypeArguments="x:Double" />
+                                                      </uix:VerifyExecutionOptions.Timeout>
+                                                    </uix:VerifyExecutionOptions>
+                                                  </uix:NClick.VerifyOptions>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </uix:NClick>
+                                                <ueab:WriteCellX Cell="[CurrentRow.ByIndex(7)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="1206.4,192" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[&quot;DONE&quot;]" />
+                                                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="1206.4,56.8" sap2010:WorkflowViewState.IdRef="MessageBox_19" Text="[&quot;ZATRZYMAC!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!&quot;]">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </ui:MessageBox>
+                                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Zapłać '" sap:VirtualizedContainerService.HintSize="1206.4,56.8" sap2010:WorkflowViewState.IdRef="NClick_22" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="c24c7721-6ec5-482b-804a-c03cf45d462a" Version="V3">
+                                                  <uix:NClick.Target>
+                                                    <uix:TargetAnchorable BrowserURL="https://haikusushi.net/confirm-order" CVScreenId="7586a8f8-9f93-4ad8-944a-44fd27b764de" CvElementArea="1059, 866, 450, 61" CvTextArea="1209, 888, 149, 19" CvTextArgument="Zaplae 154.99 PLN" CvType="Button" DesignTimeRectangle="690, 785, 558, 70" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Zapłać 154.99 PLN' parentid='device-type-selector' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Zapłać 154.99 PLN' parentid='device-type-selector' tag='BUTTON' type='' class='styles_button___Dvql styles_sizeLarge__YGfzR styles_appearancePrimary__XMJoZ styles_fullWidth__x3ayC styles_ui-pay-button__BGGb0' /&gt;" Guid="612b7fd4-bbe0-43d3-9e0b-6974377e087e" ImageBase64="" InformativeScreenshot="5f03d58bd3247e316baa7f2ea4070079.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Potwierdź zamówienie' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                      <uix:TargetAnchorable.Anchors>
+                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                          <uix:Target CVScreenId="7586a8f8-9f93-4ad8-944a-44fd27b764de" CvTextArea="1110, 816, 69, 17" CvTextArgument="Gotowka" CvType="Text" DesignTimeRectangle="690, 695, 558, 70" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Gotówką' parentid='device-type-selector' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Gotówką' parentid='device-type-selector' tag='BUTTON' type='' class='styles_button___Dvql styles_sizeLarge__YGfzR styles_appearanceStroke__LKd1h styles_withShadow__qhvq4 styles_fillContent__OccwK styles_fullWidth__x3ayC styles_head__RKBtb' check:innerText='Gotówką' /&gt;" Guid="093bfb23-c9df-4f0a-90a7-aa68d62ee0af" SearchSteps="FuzzySelector, CV" />
+                                                        </scg:List>
+                                                      </uix:TargetAnchorable.Anchors>
+                                                    </uix:TargetAnchorable>
+                                                  </uix:NClick.Target>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </uix:NClick>
+                                                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="1206.4,48" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;dodano zamowienie&quot;]">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </ui:MessageBox>
+                                              </Sequence>
+                                            </If.Else>
+                                          </If>
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ueab:ExcelForEachRowX.Body>
+                            </ueab:ExcelForEachRowX>
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelApplicationCard.Body>
+                    </ueab:ExcelApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelProcessScopeX.Body>
+            </ueab:ExcelProcessScopeX>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-433, -1448, 2576, 1408" BrowserType="Chrome" ContentHash="3LInDFk5ZESeoWxuZwFdUg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMAUExURf////7////7////9P/+//z//////P///v/9////+///+LimPv39//7//v//+f//9v/9/cGyOv37/0kyBf//77uqPfr///z//fz8/PHvsT8rAbSjPP//6///5b2tO/78+8W1OzkvBPz9/7ajRLGeQv/8+L+rP//5//3++f33/8KwQf7+/LGgP0UsAp+TQZiEQrOhRP//8f/79DUmAMe3O76vPPf0tryvNjkqAT00Af7+9jMfALKlQP/6+8O0PTUrA8KzPMGuPDAmAEMyAq2tR/38+PT///788Pr/+7GgTJmKRreoS/r48f/+3VhKHywgAP387KaURP32+T0vCUk6Da6aQs+7Nv/2/7uzPvHp0JyBT5OCP5+LPcu5PaycVcq5NLe0O0I1E/780qiUM+3twWRXLbWzTqGeVK+iOKWaevn7/7ytREk9G+7p2uzmyODavfj104J2WejiwLy5O7+6icG4PaGYOigaAJ2dL6WWT8azM8O7l5iVQeTeyWxfOP756LitO3BlQ1I/EZ6OTfj//5eUMJB/N5+QMPj3+bWtmPzz3dfRsqWkS8vAn46BWMe8PNrTwaydMNLKqvby5ePdtFxQLrapRNbVovr+9q2tU7irV66qN+jk07Wrh6GbR52Td/bsy5yVWaajPKWiaP3538S7WqmeN4h+ZY+JNZSLc/f46FNJKs6/ObKwY/jsu8/QlbWzb6aYJdPJnzwjAOvpsbm1hfTt1puXSqCZZqylUtzRmLyxd5WPUNPPh7y+b/v/8tHBnbGmLsa/s6ykkUI4B8jFlpeLZfXy24+MSKCfQSETAMfGd7e4X5WHPZmJMtPMvL+3qMa9p83GtJWKJO3kto+FZWRaQOXirsjIiMzAO762ULiuK4iBM/Hxz8e7enxvTPjx8su+hb61lPf1xdrarqilXHRqTeDb06SeLvDr6svFpoqHQamihK6he6+maKypdI16MNnOp4N4R8C0cPf0/r6/f+HimezfopCES7Kwe8i9ZNLNdra1RMC2ZOLVqaesQC3GUY4AAAAJcEhZcwAAA+cAAAPnAcO1/HEAABiySURBVHhe7Zp5XBNX18evM8MkE2EmJpHEmIhB0xARNEkt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" InformativeScreenshot="95dc4fbd2b6aa795e186d2da1fe31e06.jpg" Reference="CubyYPgzvkmFfn5F6jWJSQ/tL5oA8mQF0eA2zLjfgFlDw" Selector="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Szukaj' /&gt;" Title="Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty - Szukaj" Url="https://haikusushi.net/search?q=lunch" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

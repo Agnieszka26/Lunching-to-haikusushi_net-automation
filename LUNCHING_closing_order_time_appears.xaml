@@ -1,0 +1,510 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="hour_Targetappears" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="dt_xd" Type="InOutArgument(sd:DataTable)" />
+    <x:Property Name="hour_closing_order" Type="InArgument(x:String)" />
+    <x:Property Name="UI_section_hour" Type="InArgument(ui:UiElement)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1548,6420</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="jezeli jest dana godzina zamowienia, to przeiteruj po wszystkich jej dzieciach, aby otrzymac szczegoly zamowienia i zapisz do exela o zakladce w odpowiadajacej danej godzinie" sap:VirtualizedContainerService.HintSize="1558.4,6355.2" sap2010:WorkflowViewState.IdRef="Sequence_70">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Restaurantbackoffice" sap:VirtualizedContainerService.HintSize="1496,6235.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="38fe1011-c57d-48cf-9a0a-add32ac70f46" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1462.4,5995.2" sap2010:WorkflowViewState.IdRef="Sequence_73">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1400,5904.8" sap2010:WorkflowViewState.IdRef="Sequence_56">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="UI_section_10_45_tag" />
+                <Variable x:TypeArguments="x:String" Name="UI_section_10_45_css_selector" />
+                <Variable x:TypeArguments="x:String" Name="UI_section_10_45_parent_id" />
+                <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="delivery_time_children" />
+                <Variable x:TypeArguments="x:Int32" Name="INDEX_current_DELIVERY_TIME_CHILD" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="tag" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="1337.6,220" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_1" InUiElement="[UI_section_hour]" Result="[UI_section_10_45_tag]" Version="V3" />
+              <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="css-selector" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="1337.6,220" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_2" InUiElement="[UI_section_hour]" Result="[UI_section_10_45_css_selector]" Version="V3" />
+              <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="parentid" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="1337.6,220" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_3" InUiElement="[UI_section_hour]" Result="[UI_section_10_45_parent_id]" Version="V3" />
+              <ui:FindChildren Children="[delivery_time_children]" DisplayName="Find Children 'DIV'" Filter="&lt;webctrl /&gt;" sap:VirtualizedContainerService.HintSize="1337.6,139.2" sap2010:WorkflowViewState.IdRef="FindChildren_4" Scope="FIND_CHILDREN">
+                <ui:FindChildren.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="759beb64-7199-447c-b7ea-91fc71ef248c" InformativeScreenshot="7a33775c11647bc8128282e80092a2c9" Selector="&lt;webctrl css-selector='body&amp;gt;app-root&amp;gt;mat-drawer-container&amp;gt;mat-drawer-content&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;app-orders-list-page&amp;gt;div&amp;gt;app-purchase-summary&amp;gt;section&amp;gt;div' parentid='allWrapper' tag='DIV' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:FindChildren.Target>
+              </ui:FindChildren>
+              <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="[INDEX_current_DELIVERY_TIME_CHILD]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1337.6,4990.4" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[delivery_time_children]">
+                <ui:ForEach.Body>
+                  <ActivityAction x:TypeArguments="ui:UiElement">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ui:UiElement" Name="currentUiElement" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1304,4800" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NHighlight Color="Gold" DisplayName="Highlight" sap:VirtualizedContainerService.HintSize="1241.6,169.6" sap2010:WorkflowViewState.IdRef="NHighlight_2" InUiElement="[currentUiElement]" Version="V3" />
+                      <If Condition="[INDEX_current_DELIVERY_TIME_CHILD = 1]" sap:VirtualizedContainerService.HintSize="1241.6,4541.6" sap2010:WorkflowViewState.IdRef="If_1">
+                        <If.Then>
+                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1208,4275.2" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="childen_delivery_all_" />
+                              <Variable x:TypeArguments="x:Int32" Name="INDEX_one_delivery" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:FindChildren Children="[childen_delivery_all_]" DisplayName="Find Children 'of a children xDDD'" Filter="&lt;webctrl /&gt;" sap:VirtualizedContainerService.HintSize="1145.6,139.2" sap2010:WorkflowViewState.IdRef="FindChildren_6" Scope="FIND_CHILDREN">
+                              <ui:FindChildren.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[currentUiElement]" Id="057a46af-1bc3-47f5-8bd5-d9636edd483c" InformativeScreenshot="e8cb08ed80eb1a146440209b37adc57b">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:FindChildren.Target>
+                            </ui:FindChildren>
+                            <ui:ForEach x:TypeArguments="ui:UiElement" sap2010:Annotation.AnnotationText="dobranie sie do wszystkich dzieci i czasow zamowienia&#xA;" CurrentIndex="[INDEX_one_delivery]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1145.6,4047.2" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[childen_delivery_all_]">
+                              <ui:ForEach.Body>
+                                <ActivityAction x:TypeArguments="ui:UiElement">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="ui:UiElement" Name="oneOrder" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1112,3814.4" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                                    <Sequence.Variables>
+                                      <Variable x:TypeArguments="x:String" Name="CLASS_NAME_DROPDOWN_delivery_details_containe" />
+                                      <Variable x:TypeArguments="x:String" Name="TAG_DROPDOWNN_div" />
+                                      <Variable x:TypeArguments="x:String" Name="DOSTAWA_SELECTOR" />
+                                      <Variable x:TypeArguments="x:String" Name="DELIVERY_TIME_SELECTOR" />
+                                      <Variable x:TypeArguments="x:String" Name="delivery_time" />
+                                      <Variable x:TypeArguments="x:String" Name="DELIVERY_DETAILS_CLASS" />
+                                      <Variable x:TypeArguments="x:Int32" Name="DELIVERY_DELAILS_IDX" />
+                                      <Variable x:TypeArguments="x:String" Name="orders" />
+                                      <Variable x:TypeArguments="x:String" Name="comment" />
+                                      <Variable x:TypeArguments="x:String" Name="address" />
+                                      <Variable x:TypeArguments="x:String" Name="adress" />
+                                      <Variable x:TypeArguments="sd:DataTable" Name="dt_orders_parsered" />
+                                      <Variable x:TypeArguments="x:String" Name="ARROW_SELECTOR" />
+                                      <Variable x:TypeArguments="x:String" Name="accordin_child_index" />
+                                    </Sequence.Variables>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="1049.6,212" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
+                                      <ui:MultipleAssign.AssignOperations>
+                                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                                            <ui:AssignOperation.To>
+                                              <OutArgument x:TypeArguments="x:String">[DOSTAWA_SELECTOR]</OutArgument>
+                                            </ui:AssignOperation.To>
+                                            <ui:AssignOperation.Value>
+                                              <InArgument x:TypeArguments="x:String">&lt;webctrl parentid='mat-expansion-panel-header-0' tag='DIV' /&gt;</InArgument>
+                                            </ui:AssignOperation.Value>
+                                          </ui:AssignOperation>
+                                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+                                            <ui:AssignOperation.To>
+                                              <OutArgument x:TypeArguments="x:String">[ARROW_SELECTOR]</OutArgument>
+                                            </ui:AssignOperation.To>
+                                            <ui:AssignOperation.Value>
+                                              <InArgument x:TypeArguments="x:String">["&lt;webctrl parentid='mat-expansion-panel-header-"+INDEX_one_delivery.ToString+"' tag='IMG' /&gt;"]</InArgument>
+                                            </ui:AssignOperation.Value>
+                                          </ui:AssignOperation>
+                                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+                                            <ui:AssignOperation.To>
+                                              <OutArgument x:TypeArguments="x:String">[DELIVERY_TIME_SELECTOR]</OutArgument>
+                                            </ui:AssignOperation.To>
+                                            <ui:AssignOperation.Value>
+                                              <InArgument x:TypeArguments="x:String">["&lt;webctrl parentid='mat-expansion-panel-header-"+INDEX_one_delivery.ToString+"' tag='SPAN' /&gt;"]</InArgument>
+                                            </ui:AssignOperation.Value>
+                                          </ui:AssignOperation>
+                                        </scg:List>
+                                      </ui:MultipleAssign.AssignOperations>
+                                    </ui:MultipleAssign>
+                                    <uix:NHighlight Color="Gold" DisplayName="Highlight" sap:VirtualizedContainerService.HintSize="1049.6,169.6" sap2010:WorkflowViewState.IdRef="NHighlight_3" InUiElement="[oneOrder]" Version="V3" />
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'dostawa'" sap:VirtualizedContainerService.HintSize="1049.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="38fe1011-c57d-48cf-9a0a-add32ac70f46" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://supplier.lunching.pl/orders-list" CVScreenId="ec680c86-33de-4fe6-ac31-bad253b9741f" CvElementArea="387, 594, 36, 31" CvType="ArrowButton" DesignTimeRectangle="392, 595, 28, 28" DesignTimeScaleFactor="1.25" ElementType="Icon" FullSelectorArgument="[ARROW_SELECTOR]" FuzzySelectorArgument="[ARROW_SELECTOR]" Guid="f4d9145e-6756-427b-a085-91c09da32614" InformativeScreenshot="ad4daabfcc7533f5a3ad725b3c67d396.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Restaurantbackoffice' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target CVScreenId="ec680c86-33de-4fe6-ac31-bad253b9741f" CvTextArea="94, 598, 73, 17" CvTextArgument="dostawa" CvType="Text" DesignTimeRectangle="96, 595, 72, 26" ElementType="Text" FullSelectorArgument="[DOSTAWA_SELECTOR]" FuzzySelectorArgument="[DOSTAWA_SELECTOR]" Guid="8eff1b0f-e00d-4c33-a689-26c3563652e4" SearchSteps="FuzzySelector, CV" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                      <uix:NClick.VerifyOptions>
+                                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                                          <uix:VerifyExecutionOptions.Retry>
+                                            <InArgument x:TypeArguments="x:Boolean" />
+                                          </uix:VerifyExecutionOptions.Retry>
+                                          <uix:VerifyExecutionOptions.Timeout>
+                                            <InArgument x:TypeArguments="x:Double" />
+                                          </uix:VerifyExecutionOptions.Timeout>
+                                        </uix:VerifyExecutionOptions>
+                                      </uix:NClick.VerifyOptions>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NClick>
+                                    <uix:NGetText sap2010:Annotation.AnnotationText="" DisplayName="Get Text 'DELIVERY_TIME'" sap:VirtualizedContainerService.HintSize="1049.6,220.8" sap2010:WorkflowViewState.IdRef="NGetText_9" ScopeIdentifier="38fe1011-c57d-48cf-9a0a-add32ac70f46" ScrapingOptions="None" TextString="[delivery_time]" Version="V3">
+                                      <uix:NGetText.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://supplier.lunching.pl/orders-list" CVScreenId="b88f7b3b-1e70-4f91-99f3-dcc256421d51" CvTextArea="380, 577, 121, 22" CvType="AnyWordGroup" DesignTimeRectangle="382, 572, 121, 35" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="[DELIVERY_TIME_SELECTOR]" FuzzySelectorArgument="[DELIVERY_TIME_SELECTOR]" Guid="8ff02c2a-5bbc-4755-b862-c4bc7bb207fd" InformativeScreenshot="2f74f563f82d6e659dee89b4436a106a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Restaurantbackoffice' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target CVScreenId="b88f7b3b-1e70-4f91-99f3-dcc256421d51" CvTextArea="404, 548, 73, 16" CvTextArgument="dostawa" CvType="Text" DesignTimeRectangle="407, 544, 71, 26" ElementType="Text" FullSelectorArgument="[DOSTAWA_SELECTOR]" FuzzySelectorArgument="[DOSTAWA_SELECTOR]" Guid="56d09973-38a6-45d4-b3ac-37c09e3910e0" SearchSteps="FuzzySelector, CV" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NGetText.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NGetText>
+                                    <Assign sap:VirtualizedContainerService.HintSize="1049.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[delivery_time]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">[delivery_time.Replace("dziś ", "")]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="zapisanie surowago(takiego jaki sie odczyta) adresu, komentarza do dostawy i zamowien" DisplayName="LUNCHING_get_inner_text_delivery_details" sap:VirtualizedContainerService.HintSize="1049.6,189.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="LUNCHING_get_inner_text_delivery_details.xaml">
+                                      <ui:InvokeWorkflowFile.Arguments>
+                                        <OutArgument x:TypeArguments="x:String" x:Key="orders">[orders]</OutArgument>
+                                        <OutArgument x:TypeArguments="x:String" x:Key="comment">[comment]</OutArgument>
+                                        <OutArgument x:TypeArguments="x:String" x:Key="adress">[adress]</OutArgument>
+                                        <InArgument x:TypeArguments="x:String" x:Key="accordin_child_index">[INDEX_one_delivery.ToString]</InArgument>
+                                      </ui:InvokeWorkflowFile.Arguments>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:InvokeWorkflowFile>
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="podzielenie szczegolow zamowienia (dania) na indeks, kod zamowienia i nazwe dania" DisplayName="LUNCHING_extract_orders" sap:VirtualizedContainerService.HintSize="1049.6,189.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="LUNCHING_extract_orders.xaml">
+                                      <ui:InvokeWorkflowFile.Arguments>
+                                        <InArgument x:TypeArguments="x:String" x:Key="in_string_Input">[orders]</InArgument>
+                                        <OutArgument x:TypeArguments="sd:DataTable" x:Key="dt_orders_items">[dt_orders_parsered]</OutArgument>
+                                      </ui:InvokeWorkflowFile.Arguments>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:InvokeWorkflowFile>
+                                    <ui:CommentOut sap2010:Annotation.AnnotationText="trzeba dodac jakiegos ifa zeby moc parsowac w zaleznosci jak sie odczyta wczesniej byly grube entery i comentarze, co z komentarzami&#xA;" DisplayName="na razie nie usuwac" sap:VirtualizedContainerService.HintSize="1049.6,396" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                                      <ui:CommentOut.Body>
+                                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="LUNCHING_extract_orders.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,136.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="LUNCHING_extract_orders.xaml">
+                                            <ui:InvokeWorkflowFile.Arguments>
+                                              <InArgument x:TypeArguments="x:String" x:Key="in_string_Input">[orders]</InArgument>
+                                              <OutArgument x:TypeArguments="sd:DataTable" x:Key="dt_orders_items">[dt_orders_parsered]</OutArgument>
+                                            </ui:InvokeWorkflowFile.Arguments>
+                                          </ui:InvokeWorkflowFile>
+                                        </Sequence>
+                                      </ui:CommentOut.Body>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:CommentOut>
+                                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="zapisanie do dt zamowien&#xA;" DataTable="[dt_orders_parsered]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1049.6,541.6" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                                      <ui:ForEachRow.Body>
+                                        <ActivityAction x:TypeArguments="sd:DataRow">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,300" sap2010:WorkflowViewState.IdRef="Sequence_67">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{adress, delivery_time,comment,  CurrentRow(0).ToString, CurrentRow(1).ToString, CurrentRow(2).ToString}]" DataTable="[dt_xd]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="353.6,211.2" sap2010:WorkflowViewState.IdRef="AddDataRow_9" />
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ui:ForEachRow.Body>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:ForEachRow>
+                                    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="1049.6,772" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+                                      <ueab:ExcelProcessScopeX.Body>
+                                        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,653.6" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,564.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="today_orders.xlsx">
+                                              <ueab:ExcelApplicationCard.Body>
+                                                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                                  <ActivityAction.Argument>
+                                                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                                                  </ActivityAction.Argument>
+                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,272" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ueab:WriteRangeX Destination="[Excel.Sheet(hour_closing_order)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="433.6,183.2" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[dt_xd]" />
+                                                  </Sequence>
+                                                </ActivityAction>
+                                              </ueab:ExcelApplicationCard.Body>
+                                            </ueab:ExcelApplicationCard>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ueab:ExcelProcessScopeX.Body>
+                                    </ueab:ExcelProcessScopeX>
+                                    <ui:CommentOut DisplayName="trzeba sprawdzic jak to sprawdzic" sap:VirtualizedContainerService.HintSize="1049.6,695.2" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                                      <ui:CommentOut.Body>
+                                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="1014.4,593.6" sap2010:WorkflowViewState.IdRef="Sequence_68">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NCheckState sap2010:Annotation.AnnotationText="is more adresses?" DisplayName="Check App State 'dostawa'" sap:VirtualizedContainerService.HintSize="952,504.8" sap2010:WorkflowViewState.IdRef="NCheckState_8" ScopeIdentifier="38fe1011-c57d-48cf-9a0a-add32ac70f46" Version="V3">
+                                            <uix:NCheckState.IfExists>
+                                              <Sequence sap2010:Annotation.AnnotationText=" more adresses" DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,232" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,110.4" sap2010:WorkflowViewState.IdRef="MessageBox_22" Text="[&quot;JEST WIECEJ ADRESOW&quot;]" />
+                                              </Sequence>
+                                            </uix:NCheckState.IfExists>
+                                            <uix:NCheckState.IfNotExists>
+                                              <Sequence sap2010:Annotation.AnnotationText="no more adresses" DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,232" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,110.4" sap2010:WorkflowViewState.IdRef="MessageBox_23" Text="[&quot;NIE MA WIECEJ ADRESOW&quot;]" />
+                                              </Sequence>
+                                            </uix:NCheckState.IfNotExists>
+                                            <uix:NCheckState.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://supplier.lunching.pl/orders-list" CVScreenId="f16830ba-9616-4e81-9ce1-acba42c038df" CvTextArea="368, 585, 177, 21" CvTextArgument="Kielecka 9 m. 84" CvType="Text" DesignTimeRectangle="369, 585, 177, 21" DesignTimeScaleFactor="1.25" FullSelectorArgument="[DELIVERY_ADRES_SELECTOR]" FuzzySelectorArgument="[DELIVERY_ADRES_SELECTOR]" Guid="cb32beb7-a39a-42ae-ad3b-34c6ed91f7f8" InformativeScreenshot="bee290e517288c134838d1bda00b5042.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Restaurantbackoffice' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target CVScreenId="f16830ba-9616-4e81-9ce1-acba42c038df" CvTextArea="404, 343, 73, 16" CvTextArgument="dostawa" CvType="Text" DesignTimeRectangle="407, 339, 71, 26" ElementType="Text" FullSelectorArgument="[DOSTAWA_SELECTOR]" FuzzySelectorArgument="[DOSTAWA_SELECTOR]" Guid="5c9ec309-8125-40aa-89d1-8695085bf3e0" SearchSteps="FuzzySelector, CV" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NCheckState.Target>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </uix:NCheckState>
+                                        </Sequence>
+                                      </ui:CommentOut.Body>
+                                    </ui:CommentOut>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ui:ForEach.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:ForEach>
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,104.8" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEach.Body>
+              </ui:ForEach>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1158" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQqSURBVFhHpZdNbFRVFMclhoVxaVwZ4tIY43udL5pQFANdUaEoIdIQQlCJInFDIo2AbFwRgiEppom4MJrGoKnGKoLt9IOWWtqxRDSWAEVsh3Y6LThOP5220+P/vDfvcufOeTPTeJLfgnfuOf9/31zOve8RIlqzWkYClfvB9T8D65eiVmCh1wpejNmhF6S1pSjbAAS3gE6QAcTcBReer1C0W4GZXiv07YAdCkg9JIoagMiz4DyY8UR1TAM6HVYg9bMdavrFDj8j9fYoMIDGT4AGkPSE/IjX7KALVkA04PEj6LSCU3126BzezDpTzzGAZmvB++CO17wcZlujNPDWO6KwBJvpsoIJvJmGa3b4Sd1A1mxeirGttUTZLN3v7xfFSnEJ/C8D6c+buIETV+r2iCLFaLMCSyhVBsRN5kd842bKzs454hyJ1jZRpBjYFymUKgNxU6QYf58+4wirWFmhzpptopAf3VbwJiqVgZgp4kt4Ay2NJxxdPUbOfy0K+YHh1Y4yZaC5QMiHqSNHHUGOzK3btIKNyJH9N0PRl7aIYhL4b9mIMmXgpCnkR+b3PxxBjuTheop/15L7F9HwuU9FMYl+O3QIJcrAXlNIYmL/AUeIYzk5SX/h57hc+4qzBzgWp6fpUuUGUdAkZocjKFEGnjPFJOaiHY4Qxz+Nn6hRPP5Ta+4p0dCp0wViJjyQhioia7HcNcBIgjpjL7/qDB4nlpfpXvVWZaBn1273OWIhkaCLwUiBqI43AxjdwJIpqjP95VdY5sYcRjA/0w+jye6eXJbo16PH8wRNOqzgAywrMJDSBXXiL1bTyvw8lrmROttIyQMHKQGuvv6mw42PHs6GmeHhooeUNwMY3YDvQZQ604Alq4vYoXdFccabAYxuoMcUZkYjVbQ8kcSS1cWDwUFRnPFmAKMbaDLFmfvHTiDtRjY9TbMtPyhmAM8BnUyKR7wbvXv2igau2qGDSBcY+MAUZzJDN5B2I/3ZF3k56UZ08+zHudU4pKLtBXkG98cQ0gUGavXmzMQbbyP1MMa278zLSwbaNuGkXFx0CzCgurbh1qTleQb8VhF5FNkCA0/pzZn5rm6k3FgYiOXlGMkAc6/l+1wV0WjzN3k5fQYwygCjNx/bsUuNWI6p+mN54oyfgSuv1eWqsG/wNqKbq1UOl1U1AxjTgLpyj+/cTVM4bCYPH3EYrdxYtgHm2nv1dP34CYeumu3q+WVtBjCmgTrgO5BMihkw4d++xwr2YQPm3YzzDHig+YdAvQ0/yjWAv/ouruRVkpZogIHAY4A/SnwvrKUM4EspjXN/n9Tfw9eAB4TWgT5d2MPPAO90TLuTUj+TkgY8IFgFRooZ4Ls+vg2bB+3w41IPibINeEB4H0jrBnIbLIbf+WmpphirNuABA6fuBNYv4FMrDuFN0prS0Jr/ACjiUIPHWiS1AAAAAElFTkSuQmCC" InformativeScreenshot="81efcfa6792482f3176bdcf3e7289b13.jpg" Selector="&lt;html app='chrome.exe' title='Restaurantbackoffice' /&gt;" Title="Restaurantbackoffice" Url="https://supplier.lunching.pl/orders-list" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

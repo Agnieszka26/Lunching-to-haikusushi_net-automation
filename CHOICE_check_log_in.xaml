@@ -1,0 +1,286 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="login_to_choice" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1892.8,2451.2" sap2010:WorkflowViewState.IdRef="login_to_choice_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="login_to_choice" sap:VirtualizedContainerService.HintSize="1359.2,2386.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobist" sap:VirtualizedContainerService.HintSize="1296.8,2297.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="fe03310b-0917-4fb4-a850-e1f5f62a6478" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1263.2,2057.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'BUTTON' profile" sap:VirtualizedContainerService.HintSize="1200.8,189.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fe03310b-0917-4fb4-a850-e1f5f62a6478" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://haikusushi.net/" CVScreenId="2db06850-d530-4fab-8e81-5ceea4498bc4" CvElementArea="1148, 182, 53, 53" CvType="Button" DesignTimeRectangle="1604, 175, 60, 60" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;button' idx='3' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='styles_button___Dvql styles_appearanceStroke__LKd1h styles_withShadow__qhvq4 styles_button__WMBLY' tag='BUTTON' aaname='' /&gt;" Guid="689dc87c-43eb-4810-9569-16a5b9578589" InformativeScreenshot="4447ec69e35a79d6e197ed11dadc134e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="2db06850-d530-4fab-8e81-5ceea4498bc4" CvElementArea="1061, 182, 83, 53" CvTextArgument="Pozycja nie zaznaczona" CvType="InputBox" DesignTimeRectangle="1496, 175, 98, 60" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='pl' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='pl' tag='BUTTON' type='' class='styles_button___Dvql styles_appearanceStroke__LKd1h styles_withShadow__qhvq4 styles_button__WMBLY styles_language__6ZQgV' check:innerText='PL' /&gt;" Guid="0a8e14c6-3e75-41e3-8582-a45d9116eba7" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <Pick sap:VirtualizedContainerService.HintSize="1200.8,1777.6" sap2010:WorkflowViewState.IdRef="Pick_1">
+              <PickBranch DisplayName="logged in" sap:VirtualizedContainerService.HintSize="601.6,1706.4" sap2010:WorkflowViewState.IdRef="PickBranch_1">
+                <PickBranch.Trigger>
+                  <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+                    <ui:WaitUiElementAppear.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9eaf3f95-c513-48d1-917e-1e44faed45f6" InformativeScreenshot="6b91da2f3e9d9d1b0c3a0f38742f97e2" Selector="&lt;webctrl aaname='Wyloguj się' tag='BUTTON' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:WaitUiElementAppear.Target>
+                  </ui:WaitUiElementAppear>
+                </PickBranch.Trigger>
+                <Sequence sap:VirtualizedContainerService.HintSize="512,1399.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="otherUser" />
+                    <Variable x:TypeArguments="x:String" Name="user" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="449.6,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;logged in&quot;]" />
+                  <uix:NGetText DisplayName="Get Text 'Jagna Trainer'" sap:VirtualizedContainerService.HintSize="449.6,189.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="fe03310b-0917-4fb4-a850-e1f5f62a6478" TextString="[user]" Version="V3">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable BrowserURL="https://haikusushi.net/profile" CVScreenId="603a5112-75c9-4691-82ae-5dd54ad1cbb9" CvTextArea="111, 151, 123, 21" CvType="AnyWordGroup" DesignTimeRectangle="112, 150, 1126, 22" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Jagna Trainer' parentid='device-type-selector' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='device-type-selector' tag='DIV' type='' class='styles_title__9ajrX' /&gt;" Guid="1725e3a3-e74e-4a28-8c0c-cd8a1441405b" InformativeScreenshot="a029c383472331cf7c1fc462e05a647a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Witaj na swoim personalnym profilu' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="603a5112-75c9-4691-82ae-5dd54ad1cbb9" CvElementArea="45, 138, 53, 45" CvTextArea="65, 152, 13, 17" CvTextArgument="&lt;" CvType="Button" DesignTimeRectangle="48, 141, 48, 40" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='' class='styles_button___Dvql styles_sizeSmall__NCTix styles_appearancePrimary__XMJoZ' aaname='' /&gt;" Guid="9f2da2ef-0676-4325-b41a-3939241399dc" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NGetText.Target>
+                  </uix:NGetText>
+                  <If Condition="[user = &quot;Zamówienia Lunching&quot;]" sap:VirtualizedContainerService.HintSize="449.6,1001.6" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,197.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="353.6,108.8" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;you have logged in on Zamówienia Lunching&quot;]" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,640.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Wyloguj się'" sap:VirtualizedContainerService.HintSize="353.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fe03310b-0917-4fb4-a850-e1f5f62a6478" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://haikusushi.net/profile" CVScreenId="df437a69-a4ee-47ef-95e5-e1e4b842e89d" CvElementArea="713, 782, 500, 76" CvTextArea="904, 810, 116, 22" CvTextArgument="Wyloguj sie" CvType="Button" DesignTimeRectangle="717, 785, 495, 70" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Wyloguj się' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Wyloguj się' tag='BUTTON' type='' class='styles_button___Dvql styles_sizeLarge__YGfzR styles_appearanceStroke__LKd1h styles_withShadow__qhvq4 styles_fullWidth__x3ayC' check:innerText='Wyloguj się' /&gt;" Guid="5a5bb381-b49f-4516-97d9-4121b994383b" InformativeScreenshot="e3fc1c2951912a07df43fc1c8176e884.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Witaj na swoim personalnym profilu' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CVScreenId="df437a69-a4ee-47ef-95e5-e1e4b842e89d" CvElementArea="711, 683, 502, 92" CvTextArea="805, 718, 269, 20" CvTextArgument="Ustawienia i dane osobowe" CvType="Button" DesignTimeRectangle="807, 718, 267, 24" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Ustawienia i dane osobowe' parentid='device-type-selector' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Ustawienia i dane osobowe' parentid='device-type-selector' tag='DIV' type='' class='' check:innerText='Ustawienia i dane osobowe' /&gt;" Guid="79e08537-3146-4a97-8c1e-d78127345f89" SearchSteps="FuzzySelector, CV" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                          <uix:NClick.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NClick.VerifyOptions>
+                        </uix:NClick>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'BUTTON' profile" sap:VirtualizedContainerService.HintSize="353.6,189.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fe03310b-0917-4fb4-a850-e1f5f62a6478" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://haikusushi.net/" CVScreenId="2db06850-d530-4fab-8e81-5ceea4498bc4" CvElementArea="1148, 182, 53, 53" CvType="Button" DesignTimeRectangle="1150, 185, 48, 48" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;button' idx='3' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='styles_button___Dvql styles_appearanceStroke__LKd1h styles_withShadow__qhvq4 styles_button__WMBLY' tag='BUTTON' aaname='' /&gt;" Guid="689dc87c-43eb-4810-9569-16a5b9578589" InformativeScreenshot="90fbb8a06ff1daca8b4581e07a063bfd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                                  <uix:Target CVScreenId="2db06850-d530-4fab-8e81-5ceea4498bc4" CvElementArea="826, 181, 230, 53" CvTextArea="874, 201, 166, 17" CvTextArgument="Pozycja nie zaznaczona" CvType="Button" DesignTimeRectangle="828, 185, 227, 48" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Pozycja nie zaznaczona' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Pozycja nie zaznaczona' tag='BUTTON' type='' class='styles_button___Dvql styles_appearancePrimary__XMJoZ styles_withShadow__qhvq4 styles_disabled__QcJR4 styles_desktop-cart-button__E0xcX styles_is-empty__5me9v' check:innerText='Pozycja nie zaznaczona' /&gt;" Guid="a900cac5-7ffb-46e4-987e-010d42354ba7" SearchSteps="FuzzySelector, CV" />
+                                  <uix:Target CVScreenId="2db06850-d530-4fab-8e81-5ceea4498bc4" CvElementArea="1061, 182, 83, 53" CvType="InputBox" DesignTimeRectangle="1063, 185, 79, 48" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='pl' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='pl' tag='BUTTON' type='' class='styles_button___Dvql styles_appearanceStroke__LKd1h styles_withShadow__qhvq4 styles_button__WMBLY styles_language__6ZQgV' check:innerText='PL' /&gt;" Guid="0a8e14c6-3e75-41e3-8582-a45d9116eba7" SearchSteps="FuzzySelector, CV" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NClick>
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="log_in_to_zamowienia_lunching.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,136.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="CHOICE_log_in.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                          </ui:InvokeWorkflowFile.Arguments>
+                        </ui:InvokeWorkflowFile>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </PickBranch>
+              <PickBranch DisplayName="not logged in" sap:VirtualizedContainerService.HintSize="505.6,1706.4" sap2010:WorkflowViewState.IdRef="PickBranch_2">
+                <PickBranch.Trigger>
+                  <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'DIV'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
+                    <ui:WaitUiElementAppear.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9eaf3f95-c513-48d1-917e-1e44faed45f6" InformativeScreenshot="7147491b558b77cd2bb85ffe4153e916" Selector="&lt;webctrl class='styles_formLoginTitle__NOMCf' parentid='device-type-selector' tag='DIV' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:WaitUiElementAppear.Target>
+                  </ui:WaitUiElementAppear>
+                </PickBranch.Trigger>
+                <Sequence sap:VirtualizedContainerService.HintSize="416,464" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="otherUser" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="353.6,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot; not logged in&quot;]" />
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="log_in_to_zamowienia_lunching.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="353.6,145.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="CHOICE_log_in.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="353.6,110.4" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;you have logged in on zamwenia lunczing&quot;]" />
+                </Sequence>
+              </PickBranch>
+            </Pick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-432, -1440, 1294, 1399" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMAUExURf////7////7////9P/+//z//////P///v/9////+///+LimPv39//7//v//+f//9v/9/cGyOv37/0kyBf//77uqPfr///z//fz8/PHvsT8rAbSjPP//6///5b2tO/78+8W1OzkvBPz9/7ajRLGeQv/8+L+rP//5//3++f33/8KwQf7+/LGgP0UsAp+TQZiEQrOhRP//8f/79DUmAMe3O76vPPf0tryvNjkqAT00Af7+9jMfALKlQP/6+8O0PTUrA8KzPMGuPDAmAEMyAq2tR/38+PT///788Pr/+7GgTJmKRreoS/r48f/+3VhKHywgAP387KaURP32+T0vCUk6Da6aQs+7Nv/2/7uzPvHp0JyBT5OCP5+LPcu5PaycVcq5NLe0O0I1E/780qiUM+3twWRXLbWzTqGeVK+iOKWaevn7/7ytREk9G+7p2uzmyODavfj104J2WejiwLy5O7+6icG4PaGYOigaAJ2dL6WWT8azM8O7l5iVQeTeyWxfOP756LitO3BlQ1I/EZ6OTfj//5eUMJB/N5+QMPj3+bWtmPzz3dfRsqWkS8vAn46BWMe8PNrTwaydMNLKqvby5ePdtFxQLrapRNbVovr+9q2tU7irV66qN+jk07Wrh6GbR52Td/bsy5yVWaajPKWiaP3538S7WqmeN4h+ZY+JNZSLc/f46FNJKs6/ObKwY/jsu8/QlbWzb6aYJdPJnzwjAOvpsbm1hfTt1puXSqCZZqylUtzRmLyxd5WPUNPPh7y+b/v/8tHBnbGmLsa/s6ykkUI4B8jFlpeLZfXy24+MSKCfQSETAMfGd7e4X5WHPZmJMtPMvL+3qMa9p83GtJWKJO3kto+FZWRaQOXirsjIiMzAO762ULiuK4iBM/Hxz8e7enxvTPjx8su+hb61lPf1xdrarqilXHRqTeDb06SeLvDr6svFpoqHQamihK6he6+maKypdI16MNnOp4N4R8C0cPf0/r6/f+HimezfopCES7Kwe8i9ZNLNdra1RMC2ZOLVqaesQC3GUY4AAAAJcEhZcwAAA+cAAAPnAcO1/HEAABiySURBVHhe7Zp5XBNX18evM8MkE2EmJpHEmIhB0xARNEkt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" InformativeScreenshot="feb641a4c591f08745c3f121f548f064.jpg" Selector="&lt;html app='chrome.exe' title='Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty' /&gt;" Title="Haiku Sushi: Sushi z Dowozem na terenie całego Krakowa - Dostawa, Odbiór osobisty" Url="https://haikusushi.net/" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
