@@ -1,5 +1,12 @@
 {
-  "Tags": [],
+  "Tags": [
+    {
+      "Key": "lunching"
+    },
+    {
+      "Key": "choice"
+    }
+  ],
   "SeparateRuntimeDependencies": true,
   "IncludeSources": true
 }

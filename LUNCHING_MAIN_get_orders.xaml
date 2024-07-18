@@ -1,12 +1,14 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="get_lunch_order" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="get_lunch_order" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="adresss_order_dt" Type="OutArgument(sd:DataTable)" />
-    <x:Property Name="__current_delivery_time_close_order" Type="OutArgument(scg:IEnumerable(ui:UiElement))" />
+    <x:Property Name="io_index_to_find_delivery_container" Type="InArgument(x:String)" />
   </x:Members>
+  <this:get_lunch_order.io_index_to_find_delivery_container>
+    <InArgument x:TypeArguments="x:String" />
+  </this:get_lunch_order.io_index_to_find_delivery_container>
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>984,2139.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1022.4000000000001,3190.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>get_lunch_order_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -140,31 +142,29 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="zalogowanie sie do lunchingu, wyciagniecie zamowien, zapisanie do excela &quot;today_orders&quot;" DisplayName="get_lunch_order" sap:VirtualizedContainerService.HintSize="994.4,2074.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
-    <Sequence.Variables>
-      <Variable x:TypeArguments="sd:DataTable" Name="dt_xd" />
-    </Sequence.Variables>
+  <Sequence sap2010:Annotation.AnnotationText="zalogowanie sie do lunchingu, wyciagniecie zamowien, zapisanie do excela &quot;today_orders&quot;" DisplayName="get_lunch_order" sap:VirtualizedContainerService.HintSize="994.4,3125.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BuildDataTable DataTable="[dt_xd]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="932,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;comapny_x0020_adres&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;delivery_x0020_time&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;delivery_x0020_comment&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;order&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;comment&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;order_x0020_close_x0020_time&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;order_x0020_code&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Lunching.pl" sap:VirtualizedContainerService.HintSize="932,1862.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="02467653-df3e-462c-878f-7b4e361a453f" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Lunching.pl" sap:VirtualizedContainerService.HintSize="932,3005.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="02467653-df3e-462c-878f-7b4e361a453f" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="get orders from lunching" sap:VirtualizedContainerService.HintSize="898.4,1622.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="get orders from lunching" sap:VirtualizedContainerService.HintSize="898.4,2765.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Name="HOME_container_for_selectors" />
-              <Variable x:TypeArguments="ui:UiElement" Name="__first_close_hour" />
               <Variable x:TypeArguments="ui:UiElement" Name="UI_section_10_45" />
-              <Variable x:TypeArguments="x:String" Name="ANC_SELECTOR_10_45_" />
+              <Variable x:TypeArguments="x:String" Name="ANC_SELECTOR" />
               <Variable x:TypeArguments="x:String" Name="username" />
               <Variable x:TypeArguments="ss:SecureString" Name="password" />
+              <Variable x:TypeArguments="ui:UiElement" Name="UI_section_12_00" />
+              <Variable x:TypeArguments="x:String" Name="index_to_find_children" />
+              <Variable x:TypeArguments="x:String" Name="index_for_delivery_container_target" />
+              <Variable x:TypeArguments="x:String" Name="hour_closing_order" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -176,7 +176,7 @@
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://lunching.pl/login" CVScreenId="c24be7eb-9f07-4fb0-95bb-c046ff0c7f4f" CvElementArea="680, 319, 574, 61" CvType="InputBox" DesignTimeRectangle="683, 319, 570, 60" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='login-username' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='login-username' tag='INPUT' type='text' class='' aaname='' /&gt;" Guid="b754832f-cdd5-4286-9e61-dc88021bf18b" InformativeScreenshot="7b65030b0394d9a1e08c4272669d6a7f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Lunching.pl' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="c24be7eb-9f07-4fb0-95bb-c046ff0c7f4f" CvTextArea="693, 313, 177, 12" CvTextArgument="E-MAIL LUB KOD KLIENTA" CvType="Text" DesignTimeRectangle="691, 311, 181, 15" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname=' E-mail lub kod klienta ' check:innerText='E-MAIL LUB KOD KLIENTA' /&gt;" Guid="c0ae7920-61d4-48ac-bf39-7b73333fb9be" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -197,7 +197,7 @@
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://lunching.pl/login" CVScreenId="1efe3604-482d-4d4b-9b30-78af3ced3e53" CvTextArea="694, 405, 48, 12" CvTextArgument="HASLO" CvType="Text" DesignTimeRectangle="683, 411, 570, 59" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='login-password' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='login-password' tag='INPUT' type='password' class='' aaname='' /&gt;" Guid="72fd0f4a-95ce-4d46-8a36-d9149fbbdfc9" InformativeScreenshot="4be63a11af42a6d1a0f69a203dc2419d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Lunching.pl' /&gt;" SearchSteps="FuzzySelector, CV" Version="V3" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="1efe3604-482d-4d4b-9b30-78af3ced3e53" CvElementArea="684, 410, 570, 60" CvType="InputBox" DesignTimeRectangle="691, 403, 54, 15" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname=' Hasło ' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Hasło ' tag='LABEL' type='' class='' check:innerText='HASŁO' /&gt;" Guid="d994a3c5-70a8-49e0-97d2-39573322b220" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
@@ -235,21 +235,61 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <Assign sap:VirtualizedContainerService.HintSize="836,114.4" sap2010:WorkflowViewState.IdRef="Assign_22">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:String">[ANC_SELECTOR_10_45_]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:String">&lt;webctrl class='close-time' tag='SPAN' type='' aaname='10:45' check:innerText='10:45' /&gt;</InArgument>
-              </Assign.Value>
-            </Assign>
-            <uix:NCheckState DisplayName="Check App State '10:45'" sap:VirtualizedContainerService.HintSize="836,444" sap2010:WorkflowViewState.IdRef="NCheckState_7" OutUiElement="[UI_section_10_45]" ScopeIdentifier="02467653-df3e-462c-878f-7b4e361a453f" Version="V3">
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="836,242.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[ANC_SELECTOR]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">&lt;webctrl class='close-time' tag='SPAN' type='' aaname='10:45' check:innerText='10:45' /&gt;</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[index_to_find_children]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">1</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[io_index_to_find_delivery_container]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">0</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[hour_closing_order]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">10_45</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+            </ui:MultipleAssign>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="836,176" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;index_to_find_delivery_container &quot; + io_index_to_find_delivery_container]" />
+            <uix:NCheckState DisplayName="Check App State '10:45'" sap:VirtualizedContainerService.HintSize="836,451.2" sap2010:WorkflowViewState.IdRef="NCheckState_9" OutUiElement="[UI_section_10_45]" ScopeIdentifier="02467653-df3e-462c-878f-7b4e361a453f" Version="V3">
               <uix:NCheckState.IfExists>
                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="jezeli jest dana godzina zamowienia, to przeiteruj po wszystkich jej dzieciach, aby otrzymac szczegoly zamowienia i zapisz do exela o zakladce w odpowiadajacej danej godzinie" DisplayName="LUNCHING_closing_order_time_appears" sap:VirtualizedContainerService.HintSize="333.6,189.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="LUNCHING_closing_order_time_appears.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dt_xd">[dt_xd]</InOutArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="hour_closing_order">10_45</InArgument>
-                    <InArgument x:TypeArguments="ui:UiElement" x:Key="UI_section_hour">[UI_section_10_45]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_index_to_find_children">
+                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="index_to_find_children" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="ui:UiElement" x:Key="in_UI_section_hour">
+                      <VisualBasicValue x:TypeArguments="ui:UiElement" ExpressionText="UI_section_10_45" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_hour_closing_order">
+                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="hour_closing_order" />
+                    </InArgument>
+                    <InOutArgument x:TypeArguments="x:String" x:Key="io_index_for_delivery_container_target">
+                      <VisualBasicReference x:TypeArguments="x:String" ExpressionText="io_index_to_find_delivery_container" />
+                    </InOutArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -265,14 +305,89 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,110.4" sap2010:WorkflowViewState.IdRef="MessageBox_19" Text="[&quot;nie jest SELECTOR_section_by_closing_time&quot;]" />
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,110.4" sap2010:WorkflowViewState.IdRef="MessageBox_19" Text="[&quot;nie ma zamowien z godziny 10:45&quot;]" />
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
                 <uix:TargetAnchorable BrowserURL="https://supplier.lunching.pl/orders-list" DesignTimeRectangle="338, 379, 1241, 405" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;app-root&amp;gt;mat-drawer-container&amp;gt;mat-drawer-content&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;app-orders-list-page&amp;gt;div&amp;gt;app-purchase-summary&amp;gt;section&amp;gt;div' parentid='allWrapper' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='allWrapper' tag='DIV' class='col-xl-8 col-lg-10 col-md-10 col-sm-12 purchase-summary-container' aaname='' /&gt;" Guid="42f903d7-0694-49e7-97dc-9965e987404d" InformativeScreenshot="2d8e4a96e4116d3d236c2faeffbb4481.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Restaurantbackoffice' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target CVScreenId="8f84c509-26eb-4a62-81f7-3d2780bafd27" CvTextArea="570, 435, 72, 23" CvTextArgument="10:45" CvType="Text" DesignTimeRectangle="571, 429, 73, 35" ElementType="Text" FullSelectorArgument="[ANC_SELECTOR_10_45_]" FuzzySelectorArgument="[ANC_SELECTOR_10_45_]" Guid="6598317d-d877-4cfa-a115-d7faabaaeb48" SearchSteps="FuzzySelector, CV" />
+                      <uix:Target CVScreenId="8f84c509-26eb-4a62-81f7-3d2780bafd27" CvTextArea="570, 435, 72, 23" CvTextArgument="10:45" CvType="Text" DesignTimeRectangle="571, 429, 73, 35" ElementType="Text" FullSelectorArgument="[ANC_SELECTOR]" FuzzySelectorArgument="[ANC_SELECTOR]" Guid="6598317d-d877-4cfa-a115-d7faabaaeb48" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="836,212" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[ANC_SELECTOR]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">&lt;webctrl class='close-time' tag='SPAN' type='' aaname='12:00' check:innerText='12:00' /&gt;</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[index_to_find_children]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">2</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[hour_closing_order]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">12_00</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+            </ui:MultipleAssign>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="836,176" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[&quot;index_for_delivery_container_target&quot; + io_index_to_find_delivery_container]" />
+            <uix:NCheckState DisplayName="Check App State '12:00'" sap:VirtualizedContainerService.HintSize="836,444" sap2010:WorkflowViewState.IdRef="NCheckState_8" OutUiElement="[UI_section_12_00]" ScopeIdentifier="02467653-df3e-462c-878f-7b4e361a453f" Version="V3">
+              <uix:NCheckState.IfExists>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="jezeli jest dana godzina zamowienia, to przeiteruj po wszystkich jej dzieciach, aby otrzymac szczegoly zamowienia i zapisz do exela o zakladce w odpowiadajacej danej godzinie" DisplayName="LUNCHING_closing_order_time_appears" sap:VirtualizedContainerService.HintSize="333.6,189.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="LUNCHING_closing_order_time_appears.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_index_to_find_children">
+                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="index_to_find_children" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="ui:UiElement" x:Key="in_UI_section_hour">
+                      <VisualBasicValue x:TypeArguments="ui:UiElement" ExpressionText="UI_section_12_00" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_hour_closing_order">
+                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="hour_closing_order" />
+                    </InArgument>
+                    <InOutArgument x:TypeArguments="x:String" x:Key="io_index_for_delivery_container_target">
+                      <VisualBasicReference x:TypeArguments="x:String" ExpressionText="index_for_delivery_container_target" />
+                    </InOutArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InvokeWorkflowFile>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,200.8" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="387.2,110.4" sap2010:WorkflowViewState.IdRef="MessageBox_20" Text="[&quot;nie ma zamowien z godziny 12:00&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://supplier.lunching.pl/orders-list" DesignTimeRectangle="338, 671, 1260, 233" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;app-root&amp;gt;mat-drawer-container&amp;gt;mat-drawer-content&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;app-orders-list-page&amp;gt;div&amp;gt;app-purchase-summary&amp;gt;section&amp;gt;div' idx='2' parentid='allWrapper' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='col-xl-8 col-lg-10 col-md-10 col-sm-12 purchase-summary-container' parentid='allWrapper' tag='DIV' aaname='' check:innerText='Zamówienia z 12:00&amp;#xD;&amp;#xA;11&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;Wykaz zamówień i dostaw, podsumowanie dla kuchni oraz naklejki.&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;DRUKUJ' /&gt;" Guid="4cd22f2b-d72b-46fc-96e9-2621f7a5e634" InformativeScreenshot="0303a750e7324c46d52e6f7604062369.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Restaurantbackoffice' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="a9e004ba-e155-45ca-99d5-1831f0e3f9ed" CvTextArea="525, 715, 58, 19" CvTextArgument="12:00" CvType="Text" DesignTimeRectangle="525, 711, 58, 28" ElementType="Text" FullSelectorArgument="[ANC_SELECTOR]" FuzzySelectorArgument="[ANC_SELECTOR]" Guid="8e39b9fa-e40d-43d0-95b2-89588cb1a73e" SearchSteps="FuzzySelector, CV" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
